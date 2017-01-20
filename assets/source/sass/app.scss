@@ -1,5 +1,5 @@
-@import 'master';
+@import 'config/theme';
+@import 'config/grid';
 
-.is-child-theme {
-	//@import 'layout/base';
-}
+@import 'layout/scaffolding';
+@import 'layout/footer';

@@ -1,0 +1,46 @@
+html.video-is-playing {
+    .scroll-down-please-icon,
+    .scroll-down-please {
+        display: none !important;
+    }
+}
+
+html.translated-ltr #site-header {
+    top: 39px;
+}
+
+body {
+    background-color: $gray-light;
+}
+
+#wrapper {
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.container {
+    max-width: none;
+}
+
+#main-content {
+    // $grid-gutter-xs / 2
+    padding: $grid-gutter-xs $grid-gutter-xs / 2;
+
+    @media #{$screen-sm} {
+        padding: $grid-gutter-sm $grid-gutter-sm / 2;
+    }
+
+    @media #{$screen-md} {
+        padding: $grid-gutter-md $grid-gutter-md / 2;
+    }
+
+    @media #{$screen-lg} {
+        padding: $grid-gutter-lg $grid-gutter-lg / 2;
+    }
+}
+
+.main-container > .grid:first-child:not(.breadcrumbs-wrapper):not(.no-margin-top) {
+    padding-top: 0;
+}

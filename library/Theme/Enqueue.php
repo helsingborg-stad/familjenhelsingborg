@@ -10,6 +10,7 @@ class Enqueue
         add_action('wp_enqueue_scripts', array($this, 'style'));
         add_action('wp_enqueue_scripts', array($this, 'script'));
 
+        // Force HbgPrime to familjen theme
         add_filter('Municipio/theme/key', function () {
             return 'familjen';
         });
