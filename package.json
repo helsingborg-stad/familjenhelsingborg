@@ -1,7 +1,7 @@
 {
-  "name": "Municipio Child theme",
+  "name": "familjen-helsingborg",
   "version": "1.0.0",
-  "description": "Childtheme for Municipio theme",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
