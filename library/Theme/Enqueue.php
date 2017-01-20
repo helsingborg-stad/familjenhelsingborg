@@ -14,6 +14,13 @@ class Enqueue
         add_filter('Municipio/theme/key', function () {
             return 'familjen';
         });
+
+        // Do not use material shadow
+        add_filter('body_class', function ($classes) {
+            $classes[] = 'material-no-shadow';
+            $classes[] = 'material-no-radius';
+            return $classes;
+        });
     }
 
     /**

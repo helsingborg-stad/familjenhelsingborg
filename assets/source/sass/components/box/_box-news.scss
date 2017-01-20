@@ -1,0 +1,16 @@
+.box.box-news {
+    padding: 5px;
+    background-color: $gray-lightest;
+    color: $base-font-color;
+}
+
+.box-news:not(.box-news-horizontal) .box-title,
+.box-news:not(.box-news-horizontal) h1,
+.box-news:not(.box-news-horizontal) h2,
+.box-news:not(.box-news-horizontal) h3,
+.box-news:not(.box-news-horizontal) h4,
+.box-news:not(.box-news-horizontal) h5,
+.box-news:not(.box-news-horizontal) h6 {
+    color: $base-font-color;
+    font-weight: bold;
+}

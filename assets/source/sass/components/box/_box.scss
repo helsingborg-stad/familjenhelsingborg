@@ -1,0 +1,20 @@
+.box {
+    border-radius: 10px 0 10px 10px;
+
+    .box-image {
+        border-radius: 6px 0 0 0;
+    }
+
+    h1.link-item,
+    h2.link-item,
+    h3.link-item,
+    h4.link-item,
+    h5.link-item,
+    h6.link-item {
+        left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}
