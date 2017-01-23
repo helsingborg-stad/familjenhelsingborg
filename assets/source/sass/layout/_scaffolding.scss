@@ -49,3 +49,7 @@ body {
 .main-container > .grid:first-child:not(.breadcrumbs-wrapper):not(.no-margin-top) {
     padding-top: 0;
 }
+
+.search-results section + section {
+    margin-top: 0;
+}
