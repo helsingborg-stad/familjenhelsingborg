@@ -73,6 +73,13 @@ body {
     background-size: 770px auto;
     background-position: top center; }
 
+.tag {
+  border-radius: 2px;
+  font-size: .9em;
+  border: none;
+  background-color: #9A9B9C;
+  color: #fff; }
+
 .box {
   border-radius: 10px 0 10px 10px; }
   .box .box-image {
