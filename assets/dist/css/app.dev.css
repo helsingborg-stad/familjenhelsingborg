@@ -80,6 +80,10 @@ body {
   background-color: #9A9B9C;
   color: #fff; }
 
+.tag.tag-category {
+  background-color: #FED100;
+  color: #252525; }
+
 .box {
   border-radius: 10px 0 10px 10px; }
   .box .box-image {
