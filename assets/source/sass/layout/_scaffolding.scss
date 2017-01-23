@@ -25,6 +25,11 @@ body {
 }
 
 #main-content {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
     // $grid-gutter-xs / 2
     padding: $grid-gutter-xs $grid-gutter-xs / 2;
 

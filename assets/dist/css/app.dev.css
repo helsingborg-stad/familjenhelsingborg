@@ -32,19 +32,27 @@ body {
   max-width: none; }
 
 #main-content {
+  padding: 0;
+  margin: 0; }
+
+.main-container {
   padding: 10px 5px; }
   @media (min-width: 469px) and (max-width: 768px) {
-    #main-content {
+    .main-container {
       padding: 10px 5px; } }
   @media (min-width: 769px) and (max-width: 960px) {
-    #main-content {
+    .main-container {
       padding: 30px 15px; } }
   @media (min-width: 961px) {
-    #main-content {
+    .main-container {
       padding: 30px 15px; } }
 
 .main-container > .grid:first-child:not(.breadcrumbs-wrapper):not(.no-margin-top) {
   padding-top: 0; }
+
+.site-header .sub-site-title {
+  font-size: 2.2em;
+  font-weight: bold; }
 
 .main-footer {
   position: relative;
