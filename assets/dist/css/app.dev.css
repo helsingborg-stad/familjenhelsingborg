@@ -149,3 +149,13 @@ body {
 .box-news:not(.box-news-horizontal) h6 {
   color: #252525;
   font-weight: bold; }
+
+.box.box-news.box-news-horizontal h1, .box.box-news.box-news-horizontal h2, .box.box-news.box-news-horizontal h3, .box.box-news.box-news-horizontal h4, .box.box-news.box-news-horizontal h5, .box.box-news.box-news-horizontal h6 {
+  color: #252525; }
+
+@media (min-width: 769px) {
+  .box.box-news.box-news-horizontal .box-content {
+    padding: 15px 30px; } }
+
+.box-index-title.link-item {
+  color: #252525; }
