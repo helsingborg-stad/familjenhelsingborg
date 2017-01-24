@@ -1,6 +1,23 @@
 .main-footer {
     position: relative;
+    background-color: $gray-dark;
+    padding: $grid-gutter-xs $grid-gutter-xs / 2;
     padding-bottom: 80px;
+
+    @media #{$screen-sm} {
+        padding: $grid-gutter-sm $grid-gutter-sm / 2;
+        padding-bottom: 80px;
+    }
+
+    @media #{$screen-md} {
+        padding: $grid-gutter-md $grid-gutter-md / 2;
+        padding-bottom: 80px;
+    }
+
+    @media #{$screen-lg} {
+        padding: $grid-gutter-lg $grid-gutter-lg / 2;
+        padding-bottom: 80px;
+    }
 
     &:after {
         content: "";
