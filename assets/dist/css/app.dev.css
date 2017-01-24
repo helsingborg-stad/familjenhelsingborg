@@ -103,6 +103,21 @@ body {
     .box h6.link-item::before {
       display: none; }
 
+.box-image-container .tag {
+  border-radius: 0;
+  font-weight: bold;
+  padding: 8px; }
+  .box-image-container .tag:last-child {
+    margin-right: 0; }
+
+.box-image-container .pos-absolute-topleft,
+.box-image-container .pos-absolute-topright {
+  top: 15px; }
+
+.box-image-container .pos-absolute-bottomleft,
+.box-image-container .pos-absolute-bottomright {
+  bottom: 15px; }
+
 .box.box-news {
   padding: 5px;
   background-color: #EDEDED;

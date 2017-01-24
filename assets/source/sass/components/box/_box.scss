@@ -18,3 +18,23 @@
         }
     }
 }
+
+.box-image-container .tag {
+    border-radius: 0;
+    font-weight: bold;
+    padding: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.box-image-container .pos-absolute-topleft,
+.box-image-container .pos-absolute-topright {
+    top: 15px;
+}
+
+.box-image-container .pos-absolute-bottomleft,
+.box-image-container .pos-absolute-bottomright {
+    bottom: 15px;
+}
