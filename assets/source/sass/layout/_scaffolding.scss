@@ -29,12 +29,13 @@ body {
     margin: 0;
 }
 
-.main-container {
+#main-content .container,
+.main-footer .container {
     // $grid-gutter-xs / 2
-    padding: $grid-gutter-xs $grid-gutter-xs / 2;
+    padding: $grid-gutter-md $grid-gutter-xs / 2;
 
     @media #{$screen-sm} {
-        padding: $grid-gutter-sm $grid-gutter-sm / 2;
+        padding: $grid-gutter-md $grid-gutter-sm / 2;
     }
 
     @media #{$screen-md} {
@@ -52,4 +53,8 @@ body {
 
 .search-results section + section {
     margin-top: 0;
+}
+
+.archive-filters {
+    padding: 0 !important;
 }

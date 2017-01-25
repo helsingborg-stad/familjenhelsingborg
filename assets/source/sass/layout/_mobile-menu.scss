@@ -1,0 +1,13 @@
+.nav-mobile {
+    background-color: $gray-dark;
+}
+
+.nav-mobile-menu .search {
+    background-color: $gray;
+}
+
+.nav-mobile .current,
+.nav-mobile .current-node,
+.nav-mobile .current-menu-item {
+    background-color: darken($gray-dark, 5%);
+}
