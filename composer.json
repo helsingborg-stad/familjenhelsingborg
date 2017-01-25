@@ -1,0 +1,13 @@
+{
+    "name": "helsingborg-stad/familjenhelsingborg",
+    "description": "Familjen Helsingborg - Municipio child theme",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kristoffer Svanmark",
+            "email": "kristoffer.svanmark@lexiconitkonsult.se"
+        }
+    ],
+    "require": {}
+}
