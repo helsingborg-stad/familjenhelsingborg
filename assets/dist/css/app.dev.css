@@ -110,8 +110,7 @@ body {
 [data-tooltip]::before, [data-tooltip]::after {
   display: block;
   opacity: 0;
-  -webkit-transition: 100ms all ease-in-out;
-          transition: 100ms all ease-in-out; }
+  transition: 100ms all ease-in-out; }
 
 [data-tooltip]::after {
   -webkit-transform: translateY(calc(100% + 10px)) translateX(-50%);

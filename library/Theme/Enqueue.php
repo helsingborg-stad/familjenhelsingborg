@@ -38,6 +38,6 @@ class Enqueue
      */
     public function script()
     {
-        wp_enqueue_script('FamiljenHbg-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
+        //wp_enqueue_script('FamiljenHbg-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
     }
 }
