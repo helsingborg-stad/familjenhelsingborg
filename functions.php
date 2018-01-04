@@ -23,7 +23,7 @@ $loader->register();
 add_action('init', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
     $acfExportManager->setTextdomain('familjen-hbg');
-    $acfExportManager->setExportFolder(FREDRIKSDAL_PATH . 'library/AcfFields');
+    $acfExportManager->setExportFolder(FAMILJENHBG_PATH . 'library/AcfFields');
     $acfExportManager->autoExport(array(
         'theme-colors'             => 'group_581b2c1c5fb02',
     ));
