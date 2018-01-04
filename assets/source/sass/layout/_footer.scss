@@ -1,20 +1,27 @@
 .main-footer {
     position: relative;
-    background-color: $gray-dark;
-    padding-bottom: 80px;
-    padding-top: 0;
+    border-top: none;
 
-    &:after {
+    &:before {
         content: "";
-        height: 40px;
         width: 100%;
         display: block;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
+        top: 0;
         background-image: url($pattern);
-        background-size: 770px auto;
+        background-size: auto 400px;
         background-position: top center;
+        z-index: 1;
+        opacity: .2;
+    }
+
+    .container {
+        position: relative;
+        padding: 40px;
+        background: #fffffff2;
+        z-index: 10;
     }
 }
