@@ -11,14 +11,14 @@ FamiljenHbg.ExampleNamespace.ExampleClass = (function ($) {
      */
 	function ExampleClass() {
 
-    }
+    };
 
     /**
      * Method
      */
     ExampleClass.prototype.exampleMethod = function () {
 
-    }
+    };
 
 	return new ExampleClass();
 

@@ -10,6 +10,9 @@ class Enqueue
         add_action('wp_enqueue_scripts', array($this, 'style'));
         add_action('wp_enqueue_scripts', array($this, 'script'));
 
+        add_filter('script_loader_src', array($this, 'removeQueryString'), 15, 1);
+        add_filter('style_loader_src', array($this, 'removeQueryString'), 15, 1);
+
         // Force HbgPrime to familjen theme
         add_filter('Municipio/theme/key', function () {
             return 'familjen';
@@ -29,7 +32,7 @@ class Enqueue
      */
     public function style()
     {
-        wp_enqueue_style('FamiljenHbg-css', get_stylesheet_directory_uri(). '/assets/dist/css/app.min.css', '', filemtime(get_stylesheet_directory() . '/assets/dist/css/app.min.css'));
+        wp_enqueue_style('familjen-css', get_stylesheet_directory_uri() . '/assets/dist/' . \Municipio\Helper\CacheBust::name('css/app.css', true, true));
     }
 
     /**
@@ -38,6 +41,12 @@ class Enqueue
      */
     public function script()
     {
-        //wp_enqueue_script('FamiljenHbg-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
+        wp_enqueue_script('familjen-vendor-js', get_stylesheet_directory_uri() . '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/vendor.js', true, true), array('jquery'));
+        wp_enqueue_script('familjen-js', get_stylesheet_directory_uri() . '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/app.js', true, true), array('jquery'));
+    }
+
+    public function removeQueryString($src)
+    {
+        return remove_query_arg('ver', $src);
     }
 }
