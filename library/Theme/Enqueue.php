@@ -12,18 +12,6 @@ class Enqueue
 
         add_filter('script_loader_src', array($this, 'removeQueryString'), 15, 1);
         add_filter('style_loader_src', array($this, 'removeQueryString'), 15, 1);
-
-        // Force HbgPrime to familjen theme
-        add_filter('Municipio/theme/key', function () {
-            return 'familjen';
-        });
-
-        // Do not use material shadow
-        add_filter('body_class', function ($classes) {
-            $classes[] = 'material-no-shadow';
-            $classes[] = 'material-no-radius';
-            return $classes;
-        });
     }
 
     /**
