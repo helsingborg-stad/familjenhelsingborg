@@ -25,7 +25,7 @@ add_action('init', function () {
     $acfExportManager->setTextdomain('familjen-hbg');
     $acfExportManager->setExportFolder(FAMILJENHBG_PATH . 'library/AcfFields');
     $acfExportManager->autoExport(array(
-        'theme-colors'             => 'group_581b2c1c5fb02',
+        'theme-colors'             => 'group_5a4df66689503',
     ));
     $acfExportManager->import();
 });

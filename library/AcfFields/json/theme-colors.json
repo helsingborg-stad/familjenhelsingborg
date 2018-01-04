@@ -1,0 +1,53 @@
+[{
+    "key": "group_5a4df66689503",
+    "title": "Color scheme",
+    "fields": [
+        {
+            "key": "field_5a4df668b4cfa",
+            "label": "Select a colorscheme",
+            "name": "color_variant",
+            "type": "select",
+            "instructions": "Select a color for this page and childpages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "darkblue": "Dark blue",
+                "lightblue": "Light blue",
+                "orange": "Orange",
+                "cerice": "Cerise"
+            },
+            "default_value": [
+                "darkblue"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": ""
+}]
+
