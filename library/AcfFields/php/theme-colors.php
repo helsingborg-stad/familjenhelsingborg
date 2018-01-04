@@ -43,6 +43,13 @@
                 'value' => 'page',
             ),
         ),
+        1 => array(
+            0 => array(
+                'param' => 'page_type',
+                'operator' => '!=',
+                'value' => 'top_level',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'side',

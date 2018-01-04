@@ -39,6 +39,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "top_level"
+            }
         ]
     ],
     "menu_order": 0,
