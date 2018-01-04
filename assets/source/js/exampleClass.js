@@ -11,7 +11,7 @@ FamiljenHbg.ExampleNamespace.ExampleClass = (function ($) {
      */
 	function ExampleClass() {
 
-    };
+    }
 
     /**
      * Method
