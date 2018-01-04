@@ -5,8 +5,6 @@ namespace FamiljenHbg\Theme;
 class Color
 {
 
-    private $post;
-
     public function __construct()
     {
         // Enqueue scripts and styles
@@ -38,21 +36,5 @@ class Color
         }
 
         return $output;
-    }
-
-    /**
-     * Creates a local copy of the global instance
-     * @param string $global The name of global varable that should be made local
-     * @param string $local Handle the global with the name of this string locally
-     * @return void
-     */
-    public function globalToLocal($global, $local = null)
-    {
-        global $$global;
-        if (is_null($local)) {
-            $this->$global = $$global;
-        } else {
-            $this->$local = $$global;
-        }
     }
 }
