@@ -1,0 +1,19 @@
+
+$colors: (
+    lightblue #2699ad,
+    darkblue #4a2c7f,
+    orange #e56526,
+    cerise #dc167a,
+);
+
+@each $color in $colors {
+    .custom-color-#{nth($color, 1)} .navbar {
+        background-color: nth($color, 2);
+    }
+
+    .custom-color-darkblue .logotype svg {
+        path {
+            fill: nth($color, 2);
+        }
+    }
+}
