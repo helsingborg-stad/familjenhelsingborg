@@ -11,7 +11,7 @@ $colors: (
         background-color: nth($color, 2);
     }
 
-    .custom-color-darkblue .logotype svg {
+    .custom-color-#{nth($color, 1)} .logotype svg {
         path {
             fill: nth($color, 2);
         }
