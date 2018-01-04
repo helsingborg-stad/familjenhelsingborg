@@ -11,7 +11,7 @@
             'name' => 'color_variant',
             'type' => 'select',
             'instructions' => __('Select a color for this page and childpages.', 'familjen-hbg'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',

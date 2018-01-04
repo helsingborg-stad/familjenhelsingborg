@@ -8,7 +8,7 @@
             "name": "color_variant",
             "type": "select",
             "instructions": "Select a color for this page and childpages.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
