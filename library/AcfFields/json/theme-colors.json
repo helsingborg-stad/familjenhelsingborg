@@ -38,12 +38,10 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            }
-        ],
-        [
+            },
             {
                 "param": "page_type",
-                "operator": "!=",
+                "operator": "==",
                 "value": "top_level"
             }
         ]
