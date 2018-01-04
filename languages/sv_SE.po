@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Familjen Helsingborg\n"
+"POT-Creation-Date: 2018-01-04 11:40+0100\n"
+"PO-Revision-Date: 2018-01-04 11:41+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: library/AcfFields/php/theme-colors.php:6
+msgid "Color scheme"
+msgstr "Färgtema"
+
+#: library/AcfFields/php/theme-colors.php:10
+msgid "Select a colorscheme"
+msgstr "Välj ett färgtema"
+
+#: library/AcfFields/php/theme-colors.php:13
+msgid "Select a color for this page and childpages."
+msgstr "Välj ett färgtema för den här sidan och undersidor"
+
+#: library/AcfFields/php/theme-colors.php:22
+msgid "Dark blue"
+msgstr "Mörkblå"
+
+#: library/AcfFields/php/theme-colors.php:23
+msgid "Light blue"
+msgstr "Ljsblå"
+
+#: library/AcfFields/php/theme-colors.php:24
+msgid "Orange"
+msgstr "Orange"
+
+#: library/AcfFields/php/theme-colors.php:25
+msgid "Cerise"
+msgstr "Cerise"
+
+#: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
+msgid "Export with AcfExportManager"
+msgstr ""
+
+#: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:406
+#, php-format
+msgid "Exported %d fieldgroup(s)."
+msgstr ""
+
+#: views/authors.blade.php:7
+msgid "Authors"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Familjen Helsingborg"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This is the offical WordPress theme of Familjen Helsingborg"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kristoffer Svanmark, Sebastian Thulin, Nikolas Ramstedt"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://github.com/helsingborg-stad"
+msgstr ""
