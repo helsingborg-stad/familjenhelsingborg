@@ -41,7 +41,6 @@ class Enqueue
      */
     public function script()
     {
-        wp_enqueue_script('familjen-vendor-js', get_stylesheet_directory_uri() . '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/vendor.js', true, true), array('jquery'));
         wp_enqueue_script('familjen-js', get_stylesheet_directory_uri() . '/assets/dist/' . \Municipio\Helper\CacheBust::name('js/app.js', true, true), array('jquery'));
     }
 
