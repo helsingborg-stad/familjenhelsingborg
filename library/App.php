@@ -8,5 +8,6 @@ class App
         new \FamiljenHbg\Theme\Enqueue();
         new \FamiljenHbg\Theme\Color();
         new \FamiljenHbg\Theme\Authors();
+        new \FamiljenHbg\Theme\Filters();
     }
 }
