@@ -1,11 +1,87 @@
-@import 'config/color';
-@import 'config/theme';
+// ***************************************************************
+// *** Modularscale
+// ***************************************************************
+@import 'mixins/modularscale/modularscale';
+@import 'config/modularscale';
 
-//Colors
-@import 'color/header';
+// ***************************************************************
+// *** Common
+// ***************************************************************
+@import 'master';
+@import 'color-scheme';
 
+// ***************************************************************
+// *** HBG Prime - Config
+// ***************************************************************
+@import 'hbgprime/config/typography';
+@import 'hbgprime/config/colors';
+@import 'hbgprime/config/grid';
+@import 'hbgprime/config/icons';
+@import 'hbgprime/config/button';
+@import 'hbgprime/config/z-index';
+@import 'hbgprime/config/table';
+@import 'hbgprime/config/box';
 
-//Normal childtheme apperance
+// ***************************************************************
+// *** HBG Prime - Mixins
+// ***************************************************************
+@import 'hbgprime/mixin/positioning';
+@import 'hbgprime/mixin/forms';
+@import 'hbgprime/mixin/arrow';
+@import 'hbgprime/mixin/gradient';
+@import 'hbgprime/mixin/grid';
+@import 'hbgprime/mixin/breakpoint';
+@import 'hbgprime/mixin/box';
+@import 'hbgprime/mixin/material';
+@import 'hbgprime/mixin/render';
+@import 'hbgprime/mixin/blur';
+
+// ***************************************************************
+// *** Config
+// ***************************************************************
+@import 'config/header';
+@import 'config/elements';
+@import 'config/box';
+@import 'config/colors';
+
+// ***************************************************************
+// *** Mixins
+// ***************************************************************
+@import 'mixins/antialias';
+
+@import 'typography/body';
+
 .is-child-theme {
+    @import 'layout/lg-grid';
+
+    @import 'typography/article';
+    @import 'typography/headings';
+    @import 'typography/lead';
+    @import 'typography/sections';
+
+    @import 'layout/main';
     @import 'layout/footer';
+
+
+    @import 'color/header';
+
+    @import 'components/feedback/customer-feedback';
+
+    @import 'utility/content-background';
+
+    .container:not(.container-fullwidth) {
+        max-width: 1150px;
+    }
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    @include antialias();
+}
+
+
+article:not(.full) p, article:not(.full) h1, article:not(.full) h2, article:not(.full) h3, article:not(.full) h4, article:not(.full) .widget_calendar caption, .widget_calendar
+article:not(.full) caption, article:not(.full) h5, article:not(.full) h6, article:not(.full) li, article:not(.full) blockquote, article:not(.full) .wp-caption, article:not(.full) [class^="mod-"] {
+    max-width: 600px;
 }

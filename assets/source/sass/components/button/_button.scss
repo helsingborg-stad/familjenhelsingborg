@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Overrides
+   ========================================================================== */
+
+/* ==========================================================================
+   New styles
+   ========================================================================== */
+
+.btn {
+    @include antialias();
+    padding: $btn-padding;
+
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.btn.btn-sm {
+    padding: $btn-sm-padding;
+    font-size: $btn-sm-font-size;
+}
+.btn.btn-md {
+    padding: $btn-md-padding;
+    font-size: $btn-md-font-size;
+}
+.btn.btn-lg {
+    padding: $btn-lg-padding;
+    font-size: $btn-lg-font-size;
+}
+
+.btn:not(.btn-offcanvas) + .btn {
+    margin-left: .5rem;
+}
+
+.btn-square {
+    padding: 0;
+    padding-top: 100%;
+    width: 40px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    border: 0;
+
+    > i {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+
+    span {
+      position: absolute;
+    }
+}

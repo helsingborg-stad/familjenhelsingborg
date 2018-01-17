@@ -1,0 +1,50 @@
+.header-jumbo {}
+.navbar-sticky {}
+.navbar-sticky:not(.sticky) {}
+.navbar-sticky.sticky {}
+
+.nav-wrapper {}
+.brand {}
+.logotype {}
+.logotype svg {}
+.logotype svg #text {}
+.nav-group-flex {}
+.menu-trigger {}
+.span.menu-icon {}
+.span.menu-icon:before {}
+.span.menu-icon:after {}
+.nav-mobile-menu {}
+/* ==========================================================================
+   Overrides
+   ========================================================================== */
+
+.header-jumbo .menu-trigger {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-jumbo .logotype {
+  width: initial;
+  max-width: initial;
+}
+
+/* ==========================================================================
+   New styles
+   ========================================================================== */
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-jumbo input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.navbar .menu-item-search {
+  float: none;
+}

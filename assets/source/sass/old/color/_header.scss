@@ -1,0 +1,11 @@
+@each $color in $colors {
+    .custom-color-#{nth($color, 1)} .navbar {
+        background-color: nth($color, 2);
+    }
+
+    .custom-color-#{nth($color, 1)} .logotype svg {
+        path {
+            fill: nth($color, 2) !important;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+ul.nav-aside {
+    margin-bottom: 0;
+}
+
+.box ul.nav-aside {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+ul.nav-aside li a {
+    padding: $box-padding * 1.5 $box-spacing-horizontal $box-padding * 1.5 $box-spacing-horizontal;
+    color: $base-font-color;
+    font-size: ms(0);
+    @include antialias();
+}
+
+.nav-aside [data-load-submenu] {
+    display: none;
+}
+
+ul.nav-aside li.current-menu-item > a {
+    color: #fff;
+}
+
+ul.nav-aside li.current-menu-item ul {
+    background-color: rgba(#fff, .9);
+}

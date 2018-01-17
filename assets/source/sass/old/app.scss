@@ -1,0 +1,11 @@
+@import 'config/color';
+@import 'config/theme';
+
+//Colors
+@import 'color/header';
+
+
+//Normal childtheme apperance
+.is-child-theme {
+    @import 'layout/footer';
+}
