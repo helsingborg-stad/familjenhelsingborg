@@ -9,6 +9,8 @@ class SingleArea extends \Municipio\Controller\BaseController
         $this->data['facts'] = $this->getFacts();
         $this->data['links'] = $this->getLinkList();
         $this->data['images'] = $this->getRegionImages();
+        $this->data['location'] = $this->getLocation();
+
         $this->data['language'] = array(
             'readmore' => __("Read more about this location:", 'familjen-hbg')
         );
@@ -73,5 +75,10 @@ class SingleArea extends \Municipio\Controller\BaseController
         }
 
         return $response;
+    }
+
+    public function getLocation()
+    {
+        return get_field('area_geographical_location');
     }
 }

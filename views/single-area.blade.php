@@ -97,6 +97,13 @@
                     @endif
                 @endif
 
+                <!-- Map -->
+                @if(isset($location) && is_array($location) && isset($location['address']))
+                    <div class="area-map c-area-map t-area-map ratio-4-3">
+                        <iframe frameborder="0" style="border:0 position: absolute; top: 0; left: 0; right: 0; bottom: 0;" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDdifsG-Hd_4dpqcqZnVuByWL8d03ve47A&q={{$location['address']}}"></iframe>
+                    </div>
+                @endif
+
             </div>
         </aside>
 
