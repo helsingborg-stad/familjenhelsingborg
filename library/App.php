@@ -9,5 +9,6 @@ class App
         new \FamiljenHbg\Theme\Color();
         new \FamiljenHbg\Theme\Authors();
         new \FamiljenHbg\Theme\Filters();
+        new \FamiljenHbg\Theme\ArchiveArea();
     }
 }
