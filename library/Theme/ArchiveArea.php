@@ -13,7 +13,6 @@ class ArchiveArea
 
     public function __construct()
     {
-
         $this->VIEWS_PATHS = apply_filters('Municipio/blade/view_paths', array(
             get_stylesheet_directory() . '/views',
             get_template_directory() . '/views'
@@ -28,7 +27,6 @@ class ArchiveArea
     public function mapPlotData($query)
     {
         if ($query->is_main_query()) {
-
             if ($query->query['post_type'] != "area") {
                 return false;
             }
@@ -43,15 +41,15 @@ class ArchiveArea
 
                     $result[] = array(
                         'location' => $postItem->post_title,
-                        'excerpt' => $postItem->post_excerpt,
-                        'geo' => get_field('area_geographical_location', $postItem->postTitle)
+                        'excerpt' => wp_trim_words($postItem->post_content, 20),
+                        'geo' => get_field('area_geographical_location', $postItem->ID),
+                        'permalink' => get_permalink($postItem->ID)
                     );
                 }
             }
 
             //Get center of all points
             if (is_array($result) && !empty($result)) {
-
                 $lat = (float) 0;
                 $lng = (float) 0;
 
@@ -68,9 +66,11 @@ class ArchiveArea
                 );
             }
 
-            $blade = new Blade($this->VIEWS_PATHS, $this->CACHE_PATH);
-            echo $blade->view()->make('partials.area.map', array('data' => $result, 'center' => $center))->render();
-
+            //Add view
+            if (isset($center) && !empty($center) && isset($result) && !empty($result)) {
+                $blade = new Blade($this->VIEWS_PATHS, $this->CACHE_PATH);
+                echo $blade->view()->make('partials.area.map', array('data' => $result, 'center' => $center))->render();
+            }
         }
     }
 }
