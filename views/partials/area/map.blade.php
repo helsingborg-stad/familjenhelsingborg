@@ -9,7 +9,7 @@
             #areaMap {
               height: 400px;
               margin-bottom: 60px;
-              transition: height 200ms;
+              transition: height 400ms;
             }
 
             #areaMap:hover {
