@@ -44,7 +44,7 @@
                 link  = jsonPlots[item].permalink;
 
                 //Append html markup for infowindow
-                jsonPlots[item].info  = <h3>' + name + '</h3>' + '<p>' + info + '</p>' + '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>';
+                jsonPlots[item].info  = '<h3>' + name + '</h3>' + '<p>' + info + '</p>' + '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>';
 
                 //Create new marker
                 marker = new google.maps.Marker({
