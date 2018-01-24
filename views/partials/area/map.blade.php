@@ -3,20 +3,24 @@
       var jsonPlots = {!!json_encode($data)!!}
     </script>
     <div class="grid-xs-12">
+
+      <style scoped>
+        .area-map {
+          width: 100%;
+        }
+
+        #areaMap {
+          height: 400px;
+          margin-bottom: 60px;
+          transition: height 400ms;
+        }
+
+        #areaMap:hover {
+          height: 600px;
+        }
+      </style>
+
       <div class="area-map c-area-map t-area-map">
-
-          <style scoped>
-            #areaMap {
-              height: 400px;
-              margin-bottom: 60px;
-              transition: height 400ms;
-            }
-
-            #areaMap:hover {
-              height: 600px;
-            }
-
-          </style>
 
           <div id="areaMap"></div>
           <script>
