@@ -27,7 +27,7 @@
             function areaInitMap() {
 
               //Declare stuff
-              var infoWindow = new google.maps.InfoWindow(), marker, item, map;
+              var marker, item, map;
 
               //Create new map
               map = new google.maps.Map(document.getElementById('areaMap'), {
@@ -43,6 +43,9 @@
                 info  = jsonPlots[item].excerpt;
                 link  = jsonPlots[item].permalink;
 
+                //Append html markup for infowindow
+                jsonPlots[item].info  = <h3>' + name + '</h3>' + '<p>' + info + '</p>' + '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>';
+
                 //Create new marker
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(jsonPlots[item].geo.lat,jsonPlots[item].geo.lng),
@@ -51,16 +54,10 @@
                 });
 
                 //Add infowindow trigger
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                google.maps.event.addListener(marker, 'click', (function(marker, item) {
                   return function() {
-
                       var infoWindow = new google.maps.InfoWindow();
-
-                      infoWindow.setContent(
-                        '<h3>' + name + '</h3>' +
-                        '<p>' + info + '</p>' +
-                        '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>'
-                      );
+                      infoWindow.setContent(jsonPlots[item].info);
                       infoWindow.open(map, marker);
                   }
                 })(marker, item));
