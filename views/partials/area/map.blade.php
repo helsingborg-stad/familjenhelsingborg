@@ -4,7 +4,21 @@
     </script>
     <div class="grid-xs-12">
       <div class="area-map c-area-map t-area-map">
-          <div id="areaMap" style="height: 300px;"></div>
+
+          <style scoped>
+            #areaMap {
+              height: 400px;
+              margin-bottom: 60px;
+              transition: height 200ms;
+            }
+
+            #areaMap:hover {
+              height: 600px;
+            }
+
+          </style>
+
+          <div id="areaMap"></div>
           <script>
             function areaInitMap() {
               var map;
@@ -50,7 +64,7 @@
               }
             }
           </script>
-          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap">
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap"></script>
       </div>
     </div>
 @endif
