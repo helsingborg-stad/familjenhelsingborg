@@ -39,7 +39,7 @@
                         '<div class="info_content">' +
                         '<h3>' + name + '</h3>' +
                         '<p>' + info + '</p>' +
-                        '<br><a class="btn btn-md btn-primary" href=""><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>' +
+                        '<br><a target="_top" class="btn btn-md btn-primary" href=""><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>' +
                         '</div>'
                       );
                       infoWindow.open(map, marker);
