@@ -25,28 +25,27 @@
           <div id="areaMap"></div>
           <script>
             function areaInitMap() {
-              var map;
-              var infoWindow = new google.maps.InfoWindow(), marker, item;
+
+              //Declare stuff
+              var infoWindow = new google.maps.InfoWindow(), marker, item, map;
 
               //Create new map
               map = new google.maps.Map(document.getElementById('areaMap'), {
                 zoom: 9,
-                center: {lat: {{$center['lat']}}, lng: {{$center['lng']}}},
+                center: {!!json_encode($center)!!},
                 disableDefaultUI: false
               });
 
               for(var item in jsonPlots) {
 
                 //Get details about pin
-                lat   = jsonPlots[item].geo.lat;
-                lng   = jsonPlots[item].geo.lng;
                 name  = jsonPlots[item].location;
                 info  = jsonPlots[item].excerpt;
                 link  = jsonPlots[item].permalink;
 
                 //Create new marker
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(lat,lng),
+                    position: new google.maps.LatLng(jsonPlots[item].geo.lat,jsonPlots[item].geo.lng),
                     name: name,
                     map: map
                 });
@@ -54,12 +53,13 @@
                 //Add infowindow trigger
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                   return function() {
+
+                      var infoWindow = new google.maps.InfoWindow();
+
                       infoWindow.setContent(
-                        '<div class="info_content">' +
                         '<h3>' + name + '</h3>' +
                         '<p>' + info + '</p>' +
-                        '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>' +
-                        '</div>'
+                        '<br><a target="_top" class="btn btn-md btn-primary" href="' + link + '"><?php _e("Read more about ", 'familjen-hbg') ?> ' + name + '</a>'
                       );
                       infoWindow.open(map, marker);
                   }
