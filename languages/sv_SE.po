@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-01-24 14:52+0100\n"
-"PO-Revision-Date: 2018-01-24 14:52+0100\n"
+"POT-Creation-Date: 2018-01-26 11:08+0100\n"
+"PO-Revision-Date: 2018-01-26 11:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -33,20 +33,32 @@ msgid "Select a color for this page and childpages."
 msgstr "Välj ett färgtema för den här sidan och undersidor"
 
 #: library/AcfFields/php/theme-colors.php:22
-msgid "Dark blue"
-msgstr "Mörkblå"
+msgid "Blue"
+msgstr "Blå"
 
 #: library/AcfFields/php/theme-colors.php:23
-msgid "Light blue"
-msgstr "Ljsblå"
+msgid "Yellow"
+msgstr "Gul"
 
 #: library/AcfFields/php/theme-colors.php:24
+msgid "Purple"
+msgstr "Lila"
+
+#: library/AcfFields/php/theme-colors.php:25
+msgid "Grey (dark grey)"
+msgstr "Mörkgrå"
+
+#: library/AcfFields/php/theme-colors.php:26
 msgid "Orange"
 msgstr "Orange"
 
-#: library/AcfFields/php/theme-colors.php:25
-msgid "Cerise"
-msgstr "Cerise"
+#: library/AcfFields/php/theme-colors.php:27
+msgid "Pink"
+msgstr "Rosa"
+
+#: library/AcfFields/php/theme-colors.php:28
+msgid "Turquoise"
+msgstr "Turkos"
 
 #: library/Controller/SingleArea.php:15
 msgid "Read more about this location:"
@@ -93,3 +105,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://github.com/helsingborg-stad"
 msgstr ""
+
+#~ msgid "Dark blue"
+#~ msgstr "Mörkblå"
+
+#~ msgid "Light blue"
+#~ msgstr "Ljsblå"
+
+#~ msgid "Cerise"
+#~ msgstr "Cerise"
