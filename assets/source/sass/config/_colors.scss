@@ -8,6 +8,16 @@ $colors: (
     turquoise #2699ad
 );
 
+$complement-colors: (
+    #e56526,
+    #93959a,
+    #93959a,
+    #93959a,
+    #93959a,
+    #93959a,
+    #93959a
+);
+
 //Grey colors
 $grey: #e1e1e0;
 $lightgrey: #93959a;
@@ -15,5 +25,5 @@ $darkgrey: #494b52;
 
 //Let's be nice to the americans
 $gray: $grey;
-$lightgray: $lightgray;
-$darkgray: $dakrgrey;
+$lightgray: $lightgrey;
+$darkgray: $darkgrey;
