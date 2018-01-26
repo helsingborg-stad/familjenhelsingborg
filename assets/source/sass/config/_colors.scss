@@ -1,6 +1,19 @@
 $colors: (
-    lightblue #2699ad,
-    darkblue #4a2c7f,
+    blue #1d82c0,
+    yellow #fdda3d,
+    purple #492c7f,
+    grey #494b52,
     orange #e56526,
-    cerice #dc167a,
+    pink #dc1679,
+    turquoise #2699ad
 );
+
+//Grey colors
+$grey: #e1e1e0;
+$lightgrey: #93959a;
+$darkgrey: #494b52;
+
+//Let's be nice to the americans
+$gray: $grey;
+$lightgray: $lightgray;
+$darkgray: $dakrgrey;
