@@ -16,10 +16,13 @@
                 "id": ""
             },
             "choices": {
-                "darkblue": "Dark blue",
-                "lightblue": "Light blue",
+                "blue": "Blue",
+                "yellow": "Yellow",
+                "purple": "Purple",
+                "grey": "Grey (dark grey)",
                 "orange": "Orange",
-                "cerice": "Cerise"
+                "pink": "Pink",
+                "turquoise": "Turquoise"
             },
             "default_value": [
                 "darkblue"

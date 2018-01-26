@@ -19,10 +19,13 @@
                 'id' => '',
             ),
             'choices' => array(
-                'darkblue' => __('Dark blue', 'familjen-hbg'),
-                'lightblue' => __('Light blue', 'familjen-hbg'),
+                'blue' => __('Blue', 'familjen-hbg'),
+                'yellow' => __('Yellow', 'familjen-hbg'),
+                'purple' => __('Purple', 'familjen-hbg'),
+                'grey' => __('Grey (dark grey)', 'familjen-hbg'),
                 'orange' => __('Orange', 'familjen-hbg'),
-                'cerice' => __('Cerise', 'familjen-hbg'),
+                'pink' => __('Pink', 'familjen-hbg'),
+                'turquoise' => __('Turquoise', 'familjen-hbg'),
             ),
             'default_value' => array(
                 0 => 'darkblue',
