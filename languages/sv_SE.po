@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-01-26 11:08+0100\n"
-"PO-Revision-Date: 2018-01-26 11:09+0100\n"
+"POT-Creation-Date: 2018-01-29 15:10+0100\n"
+"PO-Revision-Date: 2018-01-29 15:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -77,9 +77,13 @@ msgstr ""
 msgid "Authors"
 msgstr "Författare"
 
-#: views/partials/area/map.blade.php:47
+#: views/partials/area/map.blade.php:43
 msgid "Read more about "
 msgstr "Läs mer om "
+
+#: views/partials/page-footer.blade.php:10
+msgid "Submit feedback on this page"
+msgstr "Lämna feedback"
 
 #: views/partials/social-share.blade.php:3
 #: views/partials/social-share.blade.php:5
