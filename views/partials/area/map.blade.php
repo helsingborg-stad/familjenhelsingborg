@@ -12,12 +12,8 @@
         #areaMap {
           height: 400px;
           margin-bottom: 60px;
-          transition: height 400ms;
         }
 
-        #areaMap:hover {
-          height: 600px;
-        }
       </style>
 
       <div class="area-map c-area-map t-area-map">
