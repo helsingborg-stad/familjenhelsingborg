@@ -1,4 +1,10 @@
 .customer-feedback-container {
+    display: none;
+
+    &:target {
+        display: block;
+    }
+
     p.text-sm, .customer-feedback-answers, .form-group {
         padding: 0  $box-spacing-vertical;
     }
