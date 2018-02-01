@@ -1,1 +1,0 @@
-var FamiljenHbg;FamiljenHbg=FamiljenHbg||{},FamiljenHbg.ExampleNamespace=FamiljenHbg.Liquid||{},FamiljenHbg.ExampleNamespace.ExampleClass=function(e){function a(){}return a.prototype.exampleMethod=function(){},new a}(jQuery);
