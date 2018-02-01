@@ -169,7 +169,7 @@
    ========================================================================== */
 
     gulp.task('scripts', function() {
-        var app = gulp.src('assets/source/js/*.js')
+        var app = gulp.src(['assets/source/js/*.js', 'assets/source/js/*/*.js'])
             .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(jshint())
