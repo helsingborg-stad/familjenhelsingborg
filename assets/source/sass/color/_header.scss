@@ -1,10 +1,10 @@
 @each $color in $colors {
-    .custom-color-#{nth($color, 1)} .c-header--top.t-familjen-helsingborg,
-    .custom-color-#{nth($color, 1)} .c-header--bottom.t-familjen-helsingborg {
+    .s-custom-color-#{nth($color, 1)} .c-header--top,
+    .s-custom-color-#{nth($color, 1)} .c-header--bottom {
         background-color: nth($color, 2);
     }
 
-    .custom-color-#{nth($color, 1)} .c-header__logo.t-header__logo svg {
+    .s-custom-color-#{nth($color, 1)} .c-header__logo svg {
         path {
             fill: nth($color, 2) !important;
         }

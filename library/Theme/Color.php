@@ -7,15 +7,14 @@ class Color
 
     public function __construct()
     {
-        // Enqueue scripts and styles
-        add_filter('language_attributes', array($this, 'addBodyClass'), 10, 2);
+        add_filter('body_class', array($this, 'addBodyClass'), 10, 1);
     }
 
     /**
      * Add child theme class
      * @return string
      */
-    public function addBodyClass($output, $doctype = "")
+    public function addBodyClass($classes)
     {
         //Get color scheme
         if (is_numeric(get_the_id())) {
@@ -30,9 +29,7 @@ class Color
 
         //Apply color scheme
         if (isset($color) && !is_null($color) && !empty($color)) {
-            $output = $output . ' class="custom-color-'.$color.'"';
-        } else {
-            $output = $output;
+            $classes[] = "s-" . $color;
         }
 
         return $output;
