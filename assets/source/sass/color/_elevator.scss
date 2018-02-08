@@ -1,0 +1,5 @@
+@each $color in $colors {
+    &.s-custom-color-#{nth($color, 1)} .scroll-elevator a {
+        background-color: nth($color, 2);
+    }
+}
