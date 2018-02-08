@@ -30,6 +30,8 @@ class Color
         //Apply color scheme
         if (isset($color) && !is_null($color) && !empty($color)) {
             $classes[] = "s-" . $color;
+        } else {
+            $classes[] = "s-blue";
         }
 
         return $classes;

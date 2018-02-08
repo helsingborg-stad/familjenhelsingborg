@@ -1,5 +1,5 @@
 @each $color in $colors {
-    .custom-color-#{nth($color, 1)} article h1 {
+    &.custom-color-#{nth($color, 1)} article h1 {
         color: nth($color, 2);
     }
 }

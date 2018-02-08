@@ -51,8 +51,7 @@
 
 @import 'typography/body';
 
-@import 'color/header';
-@import 'color/article';
+
 
 .is-child-theme {
     @import 'layout/lg-grid';
@@ -64,6 +63,9 @@
 
     @import 'layout/main';
     @import 'layout/footer';
+
+    @import 'color/header';
+    @import 'color/article';
 
     @import 'components/feedback/customer-feedback';
 
