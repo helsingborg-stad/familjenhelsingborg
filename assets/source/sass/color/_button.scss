@@ -1,21 +1,21 @@
-@each $color in $colors {
-    &.s-custom-color-#{nth($color, 1)} .btn-primary:not(.btn-outline) {
-        background-color: nth($color, 2);
-        border-color: nth($color, 2);
+@each $ccolor in $ccolors {
+    &.s-custom-color-#{nth($ccolor, 1)} .btn-primary:not(.btn-outline) {
+        background-color: nth($ccolor, 2);
+        border-color: nth($ccolor, 2);
         &:hover {
             color: #fff;
-            background-color: darken(nth($color, 2), 7%);
-            border-color: darken(nth($color, 2), 7%);
+            background-color: darken(nth($ccolor, 2), 7%);
+            border-color: darken(nth($ccolor, 2), 7%);
         }
     }
 
-    &.s-custom-color-#{nth($color, 1)} .btn-primary.btn-outline {
-        border-color: nth($color, 2);
-        color: nth($color, 2);
+    &.s-custom-color-#{nth($ccolor, 1)} .btn-primary.btn-outline {
+        border-color: nth($ccolor, 2);
+        color: nth($ccolor, 2);
 
         &:hover {
             color: #fff;
-            background-color: nth($color, 2);
+            background-color: nth($ccolor, 2);
         }
     }
 }
