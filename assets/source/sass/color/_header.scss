@@ -1,12 +1,12 @@
-@each $color in $colors {
-    &.s-custom-color-#{nth($color, 1)} .t-familjen-helsingborg.c-header--top,
-    &.s-custom-color-#{nth($color, 1)} .t-familjen-helsingborg.c-header--bottom {
-        background-color: nth($color, 2);
+@each $ccolor in $ccolors {
+    &.s-custom-color-#{nth($ccolor, 1)} .t-familjen-helsingborg.c-header--top,
+    &.s-custom-color-#{nth($ccolor, 1)} .t-familjen-helsingborg.c-header--bottom {
+        background-color: nth($ccolor, 2);
     }
 
-    &.s-custom-color-#{nth($color, 1)} .t-familjen-helsingborg.c-header__logo svg {
+    &.s-custom-color-#{nth($ccolor, 1)} .t-familjen-helsingborg.c-header__logo svg {
         path {
-            fill: nth($color, 2) !important;
+            fill: nth($ccolor, 2) !important;
         }
     }
 }
