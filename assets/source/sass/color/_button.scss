@@ -1,10 +1,21 @@
 @each $color in $colors {
     &.s-custom-color-#{nth($color, 1)} .btn-primary:not(.btn-outline) {
         background-color: nth($color, 2);
+        border-color: nth($color, 2);
+        &:hover {
+            color: #fff;
+            background-color: darken(nth($color, 2), 7%);
+            border-color: darken(nth($color, 2), 7%);
+        }
     }
 
     &.s-custom-color-#{nth($color, 1)} .btn-primary.btn-outline {
         border-color: nth($color, 2);
         color: nth($color, 2);
+
+        &:hover {
+            color: #fff;
+            background-color: nth($color, 2);
+        }
     }
 }
