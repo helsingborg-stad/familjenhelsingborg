@@ -32,6 +32,6 @@ class Color
             $classes[] = "s-" . $color;
         }
 
-        return $output;
+        return $classes;
     }
 }
