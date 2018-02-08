@@ -29,9 +29,9 @@ class Color
 
         //Apply color scheme
         if (isset($color) && !is_null($color) && !empty($color)) {
-            $classes[] = "s-" . $color;
+            $classes[] = "s-custom-color-" . $color;
         } else {
-            $classes[] = "s-blue";
+            $classes[] = "s-custom-color-blue";
         }
 
         return $classes;
