@@ -8,6 +8,10 @@
             background-color: darken(nth($ccolor, 2), 7%);
             border-color: darken(nth($ccolor, 2), 7%);
         }
+
+        i {
+            color: #fff;
+        }
     }
 
     &.s-custom-color-#{nth($ccolor, 1)} .btn-primary.btn-outline {
@@ -18,6 +22,10 @@
         &:focus {
             color: #fff;
             background-color: nth($ccolor, 2);
+        }
+
+        i {
+            color: #fff;
         }
     }
 }
