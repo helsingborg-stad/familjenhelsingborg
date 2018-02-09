@@ -4,6 +4,13 @@
     margin-bottom: $content-gutter * 3;
 }
 
+.box .box-content .link-item {
+    left: 0;
+    &:before {
+        display: none;
+    }
+}
+
 .box .box__header, .box .box-content {
     padding: $box-spacing-vertical $box-spacing-horizontal $box-spacing-vertical $box-spacing-horizontal;
 }
@@ -40,8 +47,6 @@
         padding:  $box-spacing-vertical $box-spacing-horizontal;
     }
 }
-
-
 
 .box.box-index {
     .box-index-title {
