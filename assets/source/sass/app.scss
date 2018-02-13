@@ -51,8 +51,6 @@
 
 @import 'typography/body';
 
-
-
 .is-child-theme {
     @import 'layout/lg-grid';
 
@@ -69,6 +67,7 @@
     @import 'color/button';
     @import 'color/elevator';
 
+    @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
 
     @import 'utility/content-background';
