@@ -16,9 +16,9 @@ article > h1:first-of-type {
    ========================================================================= */
 
 article {
-    * + *:not(li),
-    * + p,
-    * + p:first-of-type {
+    * + ul,
+    * + ol,
+    * + p {
         margin-top: 1.2rem;
     }
 
