@@ -73,6 +73,7 @@
     @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
     @import 'components/breadcrumbs/breadcrumbs';
+    @import 'components/navigation/accessability-nav';
 
     .container:not(.container-fullwidth) {
         max-width: 1000px;

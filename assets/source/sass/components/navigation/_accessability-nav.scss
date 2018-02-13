@@ -6,10 +6,10 @@
 
 .nav-accessibility a {
     font-weight: 400;
+    font-family: $primary-stack;
     @include antialias();
 }
 
 .nav-accessibility a:before, .nav-accessibility a i {
     margin-right: $content-gutter/4;
-
 }
