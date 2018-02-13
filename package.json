@@ -1,5 +1,5 @@
 {
-  "name": "helsingborg-stad/familjenhelsingborg",
+  "name": "familjenhelsingborg",
   "version": "1.0.0",
   "description": "Childtheme for Municipio theme",
   "main": "gulpfile.js",
