@@ -7,15 +7,11 @@
    ========================================================================= */
 
 html {
-    font-size: 16px;
-
-    @media screen and #{$screen-sm-up} {
-        font-size: 17px;
-    }
+    font-size: 100%;
 }
 
 body {
-    font-size: 1rem;
+    font-size: 1.125rem; //18px
     line-height: 1.7;
 }
 

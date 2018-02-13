@@ -82,7 +82,7 @@
    BrowserSync tasks
    ========================================================================== */
 
-    var browserSyncProxyUrl = config.browserSyncProxyUrl || 'https://karnan.dev';
+    var browserSyncProxyUrl = config.browserSyncProxyUrl || 'https://test.familjenhelsingborg.dev';
 
     gulp.task('firefox', ['browser-sync:firefox', 'watch']);
     gulp.task('chrome', ['browser-sync:chrome', 'watch']);
