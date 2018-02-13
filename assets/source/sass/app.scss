@@ -67,13 +67,13 @@
     @import 'color/button';
     @import 'color/elevator';
 
+    @import 'components/box/box';
     @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
-
-    @import 'utility/content-background';
+    @import 'components/breadcrumbs/breadcrumbs';
 
     .container:not(.container-fullwidth) {
-        max-width: 1150px;
+        max-width: 1000px;
     }
 }
 
