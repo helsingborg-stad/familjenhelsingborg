@@ -1,0 +1,7 @@
+@each $ccolor in $ccolors {
+    &.s-custom-color-#{nth($ccolor, 1)} .main-footer .logotype svg {
+        path {
+            fill: nth($ccolor, 2) !important;
+        }
+    }
+}
