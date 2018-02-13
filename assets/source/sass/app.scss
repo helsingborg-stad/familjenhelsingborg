@@ -73,8 +73,6 @@
     @import 'components/feedback/customer-feedback';
     @import 'components/breadcrumbs/breadcrumbs';
 
-    @import 'utility/content-background';
-
     .container:not(.container-fullwidth) {
         max-width: 1150px;
     }
