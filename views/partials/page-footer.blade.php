@@ -7,7 +7,9 @@
             @include('partials.social-share')
         </div>
         <div class="grid-xs-6 text-right">
+            @if(!empty(get_the_content()))
             <a href="#customer-feedback" class="btn btn-lg btn-outline btn-primary"><?php _e("Submit feedback on this page", 'familjen-hbg'); ?></a>
+            @endif
         </div>
     </div>
     @endif
