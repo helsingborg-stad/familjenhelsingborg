@@ -7,11 +7,25 @@
     @include('partials.breadcrumbs')
 
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
-        @include('partials.sidebar-left')
 
         <div class="grid-md-8 grid-lg-6 grid-print-12 grid-print-12" id="readspeaker-read">
 
             @if (is_active_sidebar('content-area-top'))
+
+                <style scoped>
+                    .section-full .section-article {
+                        text-align: left;
+                    }
+
+                    h2.section-title {
+                        font-weight: bold;
+                    }
+
+                    .section-text p {
+                        font-size: 1.2em;
+                    }
+                </style>
+
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
                 </div>
