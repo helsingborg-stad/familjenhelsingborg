@@ -5,13 +5,8 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        article h1 {
-            color: $primary;
-        }
-
-        blockquote {
-            color: inherit;
-            border-color: $accent;
+        .breadcrumbs a {
+            color: darken($accent, 5%);
         }
     }
 }

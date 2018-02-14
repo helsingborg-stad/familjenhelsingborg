@@ -1,3 +1,42 @@
+$familjen-blue: #1d82c0;
+$familjen-yellow: #fdda3d;
+$familjen-purple: #492c7f;
+$familjen-grey: #494b52;
+$familjen-orange: #e56526;
+$familjen-pink: #dc1679;
+$familjen-turquoise: #2699ad;
+
+$color-theme: (
+    blue: (
+        primary: $familjen-blue,
+        accent: $familjen-orange
+    ),
+    yellow: (
+        primary: $familjen-yellow,
+        accent: $familjen-orange
+    ),
+    purple: (
+        primary: $familjen-purple,
+        accent: $familjen-orange
+    ),
+    grey: (
+        primary: $familjen-grey,
+        accent: $familjen-orange
+    ),
+    orange: (
+        primary: $familjen-orange,
+        accent: $familjen-turquoise
+    ),
+    pink: (
+        primary: $familjen-pink,
+        accent: $familjen-blue
+    ),
+    turquoise: (
+        primary: $familjen-turquoise,
+        accent: $familjen-orange
+    )
+);
+
 $ccolors: (
     blue #1d82c0,
     yellow #fdda3d,

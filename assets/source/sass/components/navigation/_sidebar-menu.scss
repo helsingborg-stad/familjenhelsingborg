@@ -13,18 +13,49 @@ ul.nav-aside {
 ul.nav-aside li a {
     padding: $box-padding * 1.5 $box-spacing-horizontal $box-padding * 1.5 $box-spacing-horizontal;
     color: $base-font-color;
+    background-color: white;
     font-size: ms(0);
     @include antialias();
+
+    &:hover {
+        background: lighten(black, 96%);
+    }
 }
 
 .nav-aside [data-load-submenu] {
     display: none;
 }
 
-ul.nav-aside li.current-menu-item > a {
-    color: #fff;
+ul.nav-aside li.current-menu-item ul {
+    //background-color: rgba(#fff, .9);
 }
 
-ul.nav-aside li.current-menu-item ul {
-    background-color: rgba(#fff, .9);
+.nav-aside .sub-menu, .nav-aside .children, .nav-mobile .sub-menu, .nav-mobile .children {
+    border-left: 0;
+}
+
+ul.nav-aside li.current-menu-item > a {
+    //display: none;
+    //font-weight: bold;
+}
+
+
+ul.sub-menu {
+    padding-left: 15px;
+    background: transparentize(lighten(black, 90%), .66);
+}
+
+.nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
+    position: initial;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    width: initial;
+    display: initial;
+    background-color: initial;
+    color: inherit;
+}
+
+ul.sub-menu a:before, ul.nav-aside li.current-menu-item > a:before {
+    content: '- ';
 }

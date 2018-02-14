@@ -1,31 +1,39 @@
-@each $ccolor in $ccolors {
-    &.s-custom-color-#{nth($ccolor, 1)} .btn-primary:not(.btn-outline) {
-        background-color: nth($ccolor, 2);
-        border-color: nth($ccolor, 2);
-        &:hover,
-        &:focus {
-            color: #fff;
-            background-color: darken(nth($ccolor, 2), 7%);
-            border-color: darken(nth($ccolor, 2), 7%);
+@each $color, $value in $color-theme {
+    //Colors
+    $primary: map-get($value, primary);
+    $accent: map-get($value, accent);
+
+    //Color scope styles
+    &.s-custom-color-#{$color} {
+        .btn-primary:not(.btn-outline) {
+            background-color: $primary;
+            border-color: $primary;
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: darken($primary, 7%);
+                border-color: darken($primary, 7%);
+            }
+
+            i {
+                color: #fff;
+            }
         }
 
-        i {
-            color: #fff;
-        }
-    }
+        .btn-primary.btn-outline {
+            border-color: $primary;
+            color: $primary;
 
-    &.s-custom-color-#{nth($ccolor, 1)} .btn-primary.btn-outline {
-        border-color: nth($ccolor, 2);
-        color: nth($ccolor, 2);
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: $primary;
+            }
 
-        &:hover,
-        &:focus {
-            color: #fff;
-            background-color: nth($ccolor, 2);
-        }
-
-        i {
-            color: #fff;
+            i {
+                color: #fff;
+            }
         }
     }
 }
+
