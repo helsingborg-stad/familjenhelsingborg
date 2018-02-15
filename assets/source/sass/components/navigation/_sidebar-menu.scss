@@ -26,23 +26,17 @@ ul.nav-aside li a {
     display: none;
 }
 
-ul.nav-aside li.current-menu-item ul {
-    //background-color: rgba(#fff, .9);
-}
-
 .nav-aside .sub-menu, .nav-aside .children, .nav-mobile .sub-menu, .nav-mobile .children {
     border-left: 0;
 }
 
-ul.nav-aside li.current-menu-item > a {
-    //display: none;
-    //font-weight: bold;
-}
-
-
 ul.sub-menu {
     padding-left: 15px;
     background: transparentize(lighten(black, 90%), .66);
+}
+
+li.current-menu-item,
+ul.sub-menu li {
     text-indent: -10px;
 }
 
