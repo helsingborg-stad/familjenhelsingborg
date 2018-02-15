@@ -43,6 +43,7 @@ ul.nav-aside li.current-menu-item > a {
 ul.sub-menu {
     padding-left: 15px;
     background: transparentize(lighten(black, 90%), .66);
+    text-indent: -10px;
 }
 
 .nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
