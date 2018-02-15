@@ -17,8 +17,8 @@
    New styles
    ========================================================================== */
 #{$heading-elems} {
-    & + *,
-    & + p,
+    & + ol:first-of-type,
+    & + ul:first-of-type,
     & + p:first-of-type {
         margin-top: .5rem;
     }

@@ -77,6 +77,9 @@
     @import 'components/breadcrumbs/breadcrumbs';
     @import 'components/navigation/accessability-nav';
     @import 'components/form/form';
+    @import 'components/accordion/accordion';
+    @import 'components/notice/notice';
+    @import 'components/box/box-news';
 
     .container:not(.container-fullwidth) {
         max-width: 1000px;

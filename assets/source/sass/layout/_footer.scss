@@ -6,4 +6,8 @@
     background-position: top center;
     margin-top: 0;
     border-top: none;
+
+    p, ul, ol, {
+        font-family: $primary-stack;
+    }
 }

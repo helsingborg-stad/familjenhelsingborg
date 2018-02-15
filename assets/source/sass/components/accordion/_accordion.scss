@@ -1,0 +1,36 @@
+.accordion {
+
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+
+    .accordion-section {
+        background-color: #fff;
+    }
+
+    .accordion-toggle {
+        background: none;
+    }
+
+    .accordion-toggle {
+        &:before {
+            font-size: 12px;
+            content: "";
+        }
+
+        &.minus:before {
+            content: "";
+        }
+    }
+
+    .column-header {
+        font-family: $primary-stack;
+    }
+
+    .accordion-content {
+        &:after {
+            display: none;
+        }
+    }
+
+}
