@@ -23,6 +23,11 @@
         }
     }
 
+    .column-header {
+        font-family: $primary-stack;
+        font-weight: bold;
+    }
+
     .accordion-content {
         &:after {
             display: none;
