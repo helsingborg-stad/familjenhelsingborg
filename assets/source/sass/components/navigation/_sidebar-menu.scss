@@ -23,11 +23,18 @@ ul.nav-aside li a {
 }
 
 .nav-aside [data-load-submenu] {
-    display: none;
+    height: 30px;
+    width: 30px;
+    line-height: 0;
 }
 
 .nav-aside .sub-menu, .nav-aside .children, .nav-mobile .sub-menu, .nav-mobile .children {
     border-left: 0;
+}
+
+ul.nav-aside li.current-menu-item > a {
+    //display: none;
+    //font-weight: bold;
 }
 
 ul.sub-menu {
@@ -53,4 +60,16 @@ ul.sub-menu li {
 
 ul.sub-menu a:before, ul.nav-aside li.current-menu-item > a:before {
     content: '- ';
+}
+
+ .nav-aside .current-menu-item > [data-load-submenu] {
+    outline: 0;
+    background-color: rgba(black, .1);
+    .icon:after {
+        color: white;
+    }
+ }
+
+.nav-aside .current-menu-item.is-expanded > [data-load-submenu] {
+    background-color: rgba(white, .2);
 }
