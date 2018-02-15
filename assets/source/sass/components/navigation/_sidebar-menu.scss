@@ -42,6 +42,11 @@ ul.sub-menu {
     background: transparentize(lighten(black, 90%), .66);
 }
 
+li.current-menu-item,
+ul.sub-menu li {
+    text-indent: -10px;
+}
+
 .nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
     position: initial;
     top: initial;
