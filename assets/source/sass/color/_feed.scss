@@ -1,0 +1,20 @@
+@each $color, $value in $color-theme {
+    //Colors
+    $primary: map-get($value, primary);
+    $accent: map-get($value, accent);
+
+    //Color scope styles
+    &.s-custom-color-#{$color} {
+        .c-feed {
+            .c-feed__title {
+                color: $primary;
+            }
+
+            &:hover {
+                .c-feed__title {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

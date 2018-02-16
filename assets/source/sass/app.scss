@@ -71,6 +71,7 @@
     @import 'color/elevator';
     @import 'color/breadcrumbs';
     @import 'color/sidenav';
+    @import 'color/feed';
 
     @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
@@ -79,7 +80,6 @@
     @import 'components/form/form';
     @import 'components/accordion/accordion';
     @import 'components/notice/notice';
-    @import 'components/box/box';
     @import 'components/box/box-news';
 
     .container:not(.container-fullwidth) {
