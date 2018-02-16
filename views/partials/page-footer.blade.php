@@ -6,7 +6,7 @@
         <div class="grid-xs-8">
             @include('partials.social-share')
         </div>
-        <div class="grid-xs-4 text-right">
+        <div class="grid-sm-4 text-right">
             @if(!empty(get_the_content()))
                 <a href="#customer-feedback" class="btn btn-lg btn-outline btn-primary" onclick="jQuery(this).toggleClass('hidden');"><?php _e("Submit feedback on this page", 'familjen-hbg'); ?></a>
             @endif
