@@ -47,9 +47,7 @@
                 </div>
             @endif
 
-            <div class="hidden-xs hidden-sm hidden-md hidden-print">
-                @include('partials.page-footer')
-            </div>
+            @include('partials.page-footer')
 
         </div>
 
