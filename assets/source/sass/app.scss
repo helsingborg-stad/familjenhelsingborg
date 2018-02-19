@@ -82,6 +82,8 @@
     @import 'components/notice/notice';
     @import 'components/box/box-news';
     @import 'components/header/logo';
+    @import 'components/cookie/notice';
+
 
     .container:not(.container-fullwidth) {
         max-width: 1000px;
