@@ -1,0 +1,16 @@
+@each $color, $value in $color-theme {
+    //Colors
+    $primary: map-get($value, primary);
+    $accent: map-get($value, accent);
+
+    //Color scope styles
+    &.s-custom-color-#{$color} {
+        .box-panel .box-title {
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+
+
