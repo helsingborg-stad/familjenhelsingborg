@@ -15,5 +15,18 @@
                 fill: $primary !important;
             }
         }
+
+
+        .nav-mobile {
+            background: $accent;
+        }
+
+        .nav-mobile-menu .search {
+            background: darken($accent, 10%);
+        }
+
+        .nav-mobile .current, .nav-mobile .current-node, .nav-mobile .current-menu-item, .nav-mobile a:hover {
+            background-color: $primary;
+        }
     }
 }
