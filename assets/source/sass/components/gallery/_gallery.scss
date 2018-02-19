@@ -1,0 +1,25 @@
+.c-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .c-gallery__box {
+        margin-bottom: 0;
+    }
+}
+
+
+.c-gallery--sidebar {
+    margin: 0 #{$content-gutter / -2};
+    .c-gallery__item {
+        width: 50%;
+        margin-bottom: $content-gutter;
+        padding: 0 $content-gutter/2;
+    }
+
+    margin-bottom: -$content-gutter;
+}
