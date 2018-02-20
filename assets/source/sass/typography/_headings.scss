@@ -17,9 +17,9 @@
    New styles
    ========================================================================== */
 #{$heading-elems} {
-    &:not([class^="box-"], [class*=" box-"]) + ol:first-of-type,
-    &:not([class^="box-"], [class*=" box-"]) + ul:first-of-type,
-    &:not([class^="box-"], [class*=" box-"]) + p:first-of-type {
+    &:not([class^="box-"]):not([class*=" box-"]) + ol:first-of-type,
+    &:not([class^="box-"]):not([class*=" box-"]) + ul:first-of-type,
+    &:not([class^="box-"]):not([class*=" box-"]) + p:first-of-type {
         margin-top: .5rem;
     }
 
