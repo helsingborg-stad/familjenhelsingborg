@@ -1,3 +1,3 @@
-.box:not(.box-index) .box-content {
+.box:not(.box-index):not(.box-post-brick) .box-content {
     background: #fff;
 }
