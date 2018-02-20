@@ -8,7 +8,7 @@
 
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
 
-        <div class="grid-md-7 grid-lg-9 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
+        <div class="grid-md-8 grid-lg-7 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
 
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
@@ -51,16 +51,14 @@
 
         </div>
 
-        <aside class="grid-lg-3 grid-md-5 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar">
-
-            <div class="grid">
+        <aside class="grid-lg-5 grid-md-4 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar s-secondary-content">
 
                 <!-- Region images -->
                 @if(isset($images) && is_array($images) && !empty($images))
-                    <ul class="image-gallery grid grid-gallery">
+                    <ul class="c-gallery c-gallery--sidebar">
                         @foreach($images as $image)
-                            <li class="grid-md-6">
-                                <a class="box lightbox-trigger" href="{{$image['large']}}">
+                            <li class="c-gallery__item">
+                                <a class="box lightbox-trigger c-gallery__box" href="{{$image['large']}}">
                                     <img alt="{{$image['caption']}}" src="{{$image['thumbnail']}}"/>
                                 </a>
                             </li>
@@ -73,7 +71,9 @@
 
                     <!-- General -->
                     @if(isset($facts['general']) && !empty($facts['general']))
-                        {{ $facts['general'] }}
+                        <div>
+                            {{ $facts['general'] }}
+                        </div>
                     @endif
 
                     <!-- Metadata -->
@@ -116,11 +116,10 @@
 
                           }
                         </script>
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap">
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap"></script>
                     </div>
                 @endif
 
-            </div>
         </aside>
 
     </div>
