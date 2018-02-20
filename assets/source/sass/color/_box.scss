@@ -5,9 +5,20 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        .box-panel .box-title {
+        .box .box-title, .box-index-title.link-item, .box .box-content h5.link-item {
             color: $primary;
             border-color: $primary;
+        }
+
+        .box.box-panel {
+            .box-title, .box-title.link-item, h5, h4 {
+                color: white;
+                background-color: $primary;
+            }
+
+            &.box-panel-secondary .box-title {
+                color: $primary;
+            }
         }
     }
 }
