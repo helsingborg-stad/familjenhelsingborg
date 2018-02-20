@@ -1,0 +1,26 @@
+.is-child-theme .container:not(.container-fullwidth) {
+    margin: 0 auto;
+    max-width: $screen-lg-max;
+
+    @media screen and (max-width: $screen-lg-max + 60) {
+        margin: 0 30px;
+    }
+
+    @media #{$screen-sm} {
+        margin: 0 20px;
+    }
+
+    @media #{$screen-xs} {
+        margin: 0 10px;
+    }
+}
+
+.is-child-theme .container.container-fullwidth {
+    @media #{$screen-sm} {
+        margin: 0 20px;
+    }
+
+    @media #{$screen-xs} {
+        margin: 0 10px;
+    }
+}
