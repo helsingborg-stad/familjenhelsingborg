@@ -1,5 +1,8 @@
 .customer-feedback-container {
     display: none;
+    background: #fff;
+    border: none;
+    padding: $box-spacing-vertical;
 
     &:target {
         display: block;
@@ -17,8 +20,6 @@
         margin-top: $content-gutter;
     }
 
-    padding-bottom: $box-spacing-vertical;
-
     .notice {
         margin-top: $box-spacing-vertical / 2;
     }
@@ -26,10 +27,4 @@
     i.pricon-question-o {
         margin-right: $content-gutter / 2;
     }
-}
-
-#customer-feedback {
-    background: white;
-    border: 0;
-    padding: 30px;
 }
