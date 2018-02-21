@@ -17,11 +17,11 @@
         &:before {
             top: 0;
             left: 0;
-            bottom:0;
+            bottom: 30px;
             width: 1px;
             content: "";
             position: absolute;
-            background: #f5f5f5;
+            background: $grey;
         }
     }
 }
