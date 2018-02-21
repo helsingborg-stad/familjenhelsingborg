@@ -15,9 +15,13 @@
         }
 
         .nav-accessibility a {
-
-
             &:hover {
+                color: $accent;
+            }
+        }
+
+        .s-article-content {
+            p a:not(.btn), .link {
                 color: $accent;
             }
         }

@@ -5,9 +5,24 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
+        .box .link-item {
+            color: $primary;
+
+            &:hover {
+                text-decoration: none;
+                color: $accent;
+            }
+        }
         .box .box-title, .box-index-title.link-item, .box .box-content h5.link-item {
             color: $primary;
             border-color: $primary;
+        }
+
+        a.box:hover {
+            .box-index-title, .box-title {
+                color: $accent !important;
+            }
+
         }
 
         #main-content .box.box-panel {
