@@ -1,4 +1,9 @@
 .lead {
     font-weight: 500;
-    font-size: ms(2);
+    font-size: ms(1);
+    color: black;
+
+    @media all and #{$screen-lg} {
+        font-size: ms(2);
+    }
 }
