@@ -59,7 +59,7 @@
     }
 
     .box, .box-panel {
-        & > ul.nav > li {
+        & > ul.nav > li, & .table td {
             padding: $content-gutter*0.75 $content-gutter*2;
         }
     }
