@@ -5,18 +5,21 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        .breadcrumbs a {
-            color: $primary;
+        .breadcrumbs {
+            a {
+                color: $primary;
+                &:hover {
+                    text-decoration: none;
+                    color: darken($accent, 5%);
+                }
+            }
 
-            &:hover {
-                text-decoration: none;
-                color: darken($accent, 5%);
+            li:last-of-type span {
+                font-weight: 600;
+                color: $primary;
             }
         }
 
-        li:last-of-type span {
-            font-weight: 600;
-            color: $primary;
-        }
+
     }
 }
