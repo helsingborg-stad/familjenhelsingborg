@@ -6,7 +6,17 @@
     //Color scope styles
     &.s-custom-color-#{$color} {
         .breadcrumbs a {
-            color: darken($accent, 5%);
+            color: $primary;
+
+            &:hover {
+                text-decoration: none;
+                color: darken($accent, 5%);
+            }
+        }
+
+        span.breadcrumbs-current {
+            font-weight: 600;
+            color: $primary;
         }
     }
 }
