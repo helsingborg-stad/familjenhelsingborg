@@ -6,7 +6,7 @@
     //Color scope styles
     &.s-custom-color-#{$color} ul.nav-aside {
         li.current-menu-item > a {
-            background-color: $accent;
+            background-color: $primary;
             color: white;
         }
     }

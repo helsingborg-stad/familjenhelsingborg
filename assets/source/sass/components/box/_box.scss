@@ -1,64 +1,66 @@
-//Reset background, borders, box-shadow from element-level/child items
-.box, .box-panel, .box-panel-secondary {
-    & > .box-content, .box-content, & > *, & > ul.nav {
-        background: initial;
-        box-shadow: initial !important;
-        border: initial;
-        border-radius: initial !important;
+#main-content {
+    //Reset background, borders, box-shadow from element-level/child items
+    .box, .box-panel, .box-panel-secondary {
+        & > .box-content, .box-content, & > *, & > ul.nav {
+            background: initial;
+            box-shadow: initial !important;
+            border: initial;
+            border-radius: initial !important;
+        }
     }
-}
-//Reset image within box
-.box .box-image-container img {
-    display: block;
-}
-
-//reset box title
-.box-index-title.link-item {
-    padding-bottom: 0;
-    padding-right: initial;
-    margin-bottom: $content-gutter * 0.75;
-}
-
-//Common styling
-.box {
-    box-shadow: 0 2px 3px rgba(0,0,0,.08);
-    background: white;
-    border-radius: 2px;
-
-    .box-content {
-        padding: $content-gutter*1.5 $content-gutter*2;
+    //Reset image within box
+    .box .box-image-container img {
+        display: block;
     }
-}
 
-//Reduce padding if img is present
-//.box > .box-image-container + * {
-    //padding-top: $content-gutter*1.5;
-//}
-
-//Remove icon
-.box .link-item {
-    //left: 0;
-
-    &:before {
-        color: inherit;
+    //reset box title
+    .box-index-title.link-item {
+        padding-bottom: 0;
+        padding-right: initial;
+        margin-bottom: $content-gutter * 0.75;
     }
-}
 
-.box-panel {
-    .box-title {
-        padding: $content-gutter*1.5 $content-gutter*2;
-        padding-bottom: $content-gutter*1.5;
+    //Common styling
+    .box {
+        box-shadow: 0 2px 3px rgba(0,0,0,.08);
+        background: white;
+        border-radius: 2px;
+
+        .box-content {
+            padding: $content-gutter*1.5 $content-gutter*2;
+        }
     }
-}
 
-.box-panel.box-panel-secondary {
-    .box-title {
-        border-bottom: solid 2px rgba(black, 0.05);
+    //Reduce padding if img is present
+    //.box > .box-image-container + * {
+        //padding-top: $content-gutter*1.5;
+    //}
+
+    //Remove icon
+    .box .link-item {
+        //left: 0;
+
+        &:before {
+            color: inherit;
+        }
     }
-}
 
-.box, .box-panel {
-    & > ul.nav > li {
-        padding: $content-gutter*0.75 $content-gutter*2;
+    .box-panel {
+        .box-title {
+            padding: $content-gutter*1.5 $content-gutter*2;
+            padding-bottom: $content-gutter*1.5;
+        }
+    }
+
+    .box-panel.box-panel-secondary {
+        .box-title {
+            border-bottom: solid 2px rgba(black, 0.05);
+        }
+    }
+
+    .box, .box-panel {
+        & > ul.nav > li, & .table td {
+            padding: $content-gutter*0.75 $content-gutter*2;
+        }
     }
 }
