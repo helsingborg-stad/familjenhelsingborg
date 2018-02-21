@@ -7,6 +7,9 @@
     margin-top: 0;
     border-top: none;
 
+    padding:  #{$content-gutter * 7} 0;
+    padding-bottom: $content-gutter * 5;
+
     p, ul, ol, {
         font-family: $primary-stack;
     }
