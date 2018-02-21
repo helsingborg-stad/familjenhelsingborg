@@ -24,3 +24,37 @@
         margin: 0 10px;
     }
 }
+
+
+.is-child-theme .container:not(.container-fullwidth) {
+    width: 90%;
+    max-width: 40rem;
+    margin: auto;
+
+    @media all and #{$screen-md-up} {
+        max-width: 60rem;
+    }
+}
+
+.is-child-theme .container.main-container:not(.container-fullwidth) {
+    max-width: 30rem;
+
+    @media all and #{$screen-md-up} {
+        max-width: 60rem;
+    }
+}
+
+.c-header .c-header__row.container {
+    padding-left: 0;
+    padding-right: 0;
+
+    .c-navbar {
+        margin-left: initial;
+        margin-right: initial;
+    }
+}
+
+
+.sidebar-content-area-bottom {
+    margin-top: $content-gutter * 4;
+}
