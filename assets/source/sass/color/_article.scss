@@ -13,5 +13,13 @@
             color: inherit;
             border-color: $accent;
         }
+
+        .nav-accessibility a {
+
+
+            &:hover {
+                color: $accent;
+            }
+        }
     }
 }
