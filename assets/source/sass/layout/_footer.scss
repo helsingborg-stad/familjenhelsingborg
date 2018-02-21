@@ -13,15 +13,17 @@
 
     border-bottom: solid 30px $grey;
 
-    div[class^="modularity-mod-"] + div[class^="modularity-mod-"] {
-        &:before {
-            top: 0;
-            left: 0;
-            bottom: 30px;
-            width: 1px;
-            content: "";
-            position: absolute;
-            background: $grey;
+    @media screen and #{$screen-md-up} {
+        div[class^="modularity-mod-"] + div[class^="modularity-mod-"] {
+            &:before {
+                top: 0;
+                left: 0;
+                bottom: 30px;
+                width: 1px;
+                content: "";
+                position: absolute;
+                background: $grey;
+            }
         }
     }
 }
