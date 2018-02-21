@@ -14,7 +14,7 @@
             }
         }
 
-        span.breadcrumbs-current {
+        li:last-of-type span {
             font-weight: 600;
             color: $primary;
         }

@@ -1,3 +1,7 @@
-p, article {
+.s-article-content {
     font-family: $secondary-stack;
+
+    .box {
+        font-family: $primary-stack;
+    }
 }
