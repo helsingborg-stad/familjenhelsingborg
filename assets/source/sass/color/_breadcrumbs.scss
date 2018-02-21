@@ -7,7 +7,7 @@
     &.s-custom-color-#{$color} {
         .breadcrumbs {
             a {
-                color: $primary;
+                color: inherit;
                 &:hover {
                     text-decoration: none;
                     color: darken($accent, 5%);
@@ -19,7 +19,5 @@
                 color: $primary;
             }
         }
-
-
     }
 }
