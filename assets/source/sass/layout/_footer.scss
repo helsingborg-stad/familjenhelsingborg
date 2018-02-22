@@ -18,6 +18,7 @@
 
     @media screen and #{$screen-md-up} {
         div[class^="modularity-mod-"] + div[class^="modularity-mod-"] {
+            position: relative;
             &:before {
                 top: 0;
                 left: 0;
