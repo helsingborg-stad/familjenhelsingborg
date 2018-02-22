@@ -33,6 +33,7 @@
 // ***************************************************************
 // *** Config
 // ***************************************************************
+@import 'config/spacing';
 @import 'config/font-family';
 @import 'config/header';
 @import 'config/elements';
@@ -41,40 +42,39 @@
 @import 'config/layout';
 
 // ***************************************************************
+// *** Tools / Mixins
+// ***************************************************************
+@import 'mixins/antialias';
+
+// ***************************************************************
 // *** Common
 // ***************************************************************
 @import 'master';
 
-// ***************************************************************
-// *** Mixins
-// ***************************************************************
-@import 'mixins/antialias';
-
-@import 'typography/body';
-
 .is-child-theme {
-    @import 'layout/lg-grid';
+    //Reset
+    //@import 'reset/reset';
 
-    @import 'typography/article';
+    //Typography
+    @import 'typography/document';
     @import 'typography/headings';
+    @import 'typography/article';
     @import 'typography/lead';
     @import 'typography/sections';
     @import 'typography/secondary-stack';
 
+    //Layout
+    @import 'layout/container';
     @import 'layout/main';
     @import 'layout/footer';
-    @import 'layout/sidebar-right';
+    @import 'layout/sidebar';
 
-    @import 'color/header';
-    @import 'color/footer';
-    @import 'color/article';
-    @import 'color/button';
-    @import 'color/elevator';
-    @import 'color/breadcrumbs';
-    @import 'color/sidenav';
-    @import 'color/feed';
-    @import 'color/box';
+    @import 'layout/lg-grid';
 
+    //Objects
+    //@import 'objects/object';
+
+    //Components
     @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
     @import 'components/breadcrumbs/breadcrumbs';
@@ -85,19 +85,18 @@
     @import 'components/box/box';
     @import 'components/box/box-news';
     @import 'components/cookie/notice';
-
     @import 'components/gallery/gallery';
 
-.c-header {
-    a {
-        font-size: 16px;
-    }
-
-    &.c-header--top a {
-        font-size: 14px;
-    }
-}
-
+    //Color themes
+    @import 'color/header';
+    @import 'color/footer';
+    @import 'color/article';
+    @import 'color/button';
+    @import 'color/elevator';
+    @import 'color/breadcrumbs';
+    @import 'color/sidenav';
+    @import 'color/feed';
+    @import 'color/box';
 }
 
 h1, h2, h3, h4, h5, h6 {

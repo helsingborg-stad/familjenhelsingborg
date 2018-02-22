@@ -32,7 +32,7 @@
     margin: auto;
 
     @media all and #{$screen-md-up} {
-        max-width: 60rem;
+        max-width: 70rem;
     }
 }
 
@@ -40,7 +40,7 @@
     max-width: 30rem;
 
     @media all and #{$screen-md-up} {
-        max-width: 60rem;
+        max-width: 70rem;
     }
 }
 
@@ -57,4 +57,17 @@
 
 .sidebar-content-area-bottom {
     margin-top: $content-gutter * 4;
+}
+
+
+.c-content-width {
+    max-width: 34rem;
+}
+
+.u-push-left {
+    margin-left: auto;
+}
+
+.u-push-right {
+    margin-right: auto;
 }

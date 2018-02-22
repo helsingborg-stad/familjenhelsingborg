@@ -10,8 +10,9 @@ html {
     font-size: 100%;
 }
 
-body {
-    font-size: 1rem; //18px
+//Body
+& {
+    font-size: 1rem; //16px
     line-height: 1.6;
     font-family: $primary-stack;
     color: rgba(black, 0.8);
