@@ -15,8 +15,10 @@
 
 .c-gallery--sidebar {
     margin: 0 #{$content-gutter / -2};
+
     .c-gallery__item {
-        width: 50%;
+        width: 25%;
+
         margin-bottom: $content-gutter;
         padding: 0 $content-gutter/2;
     }

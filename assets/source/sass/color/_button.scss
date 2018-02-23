@@ -20,6 +20,22 @@
             }
         }
 
+        .btn-secondary:not(.btn-outline) {
+            background-color: $accent;
+            border-color: $accent;
+            color: white;
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: darken($accent, 7%);
+                border-color: darken($accent, 7%);
+            }
+
+            i {
+                color: #fff;
+            }
+        }
+
         .btn-primary.btn-outline {
             border-color: $primary;
             color: $primary;

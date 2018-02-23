@@ -27,3 +27,11 @@
         margin-bottom: $element-space-large;
     }
 }
+
+.u-offset-element {
+    margin-top: -$element-space;
+
+    &.u-offset-element--large {
+        margin-top: -$element-space-large;
+    }
+}
