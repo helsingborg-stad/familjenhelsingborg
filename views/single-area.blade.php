@@ -1,15 +1,14 @@
 @extends('templates.master')
 
 @section('content')
-
-<div class="container main-container c-element-spacing c-element-spacing--large">
+<div class="u-block has-elements u-no-padding-top">
+<div class="container u-elements">
 
     @include('partials.breadcrumbs')
 
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
 
-        <div class="grid-md-7 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
-            <div class="c-content-width">
+        <div class="grid-lg-7 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
@@ -21,24 +20,6 @@
 
                 @include('partials.article')
 
-                <!-- External links -->
-                @if(isset($links) && is_array($links) && !empty($links))
-                    <div class="grid">
-                        <div class="grid-xs-12">
-                            <h3 class="read-more-about-this">{{$language['readmore']}}</h3>
-                            <ul class="area-link-list">
-                                @foreach($links as $linkItem)
-                                    <li class="{{sanitize_title($linkItem['link_label'])}} inline-block">
-                                        <a class="btn btn-md btn-primary" href="{{$linkItem['link_url']}}">
-                                            <span class="link-item link-item-outbound">{{$linkItem['link_label']}}</span>
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                @endif
-
             @endwhile
 
             @if (is_active_sidebar('content-area'))
@@ -48,10 +29,9 @@
             @endif
 
             @include('partials.page-footer')
-</div>
         </div>
 
-        <aside class="grid-md-5 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar s-secondary-content">
+        <aside class="grid-lg-5 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar s-secondary-content">
                 <div class="box">
                 <!-- Map -->
                 @if(isset($location) && is_array($location) && isset($location['address']))
@@ -78,6 +58,7 @@
                 @endif
 
                 <div class="box-content">
+                <h4 class="box-title">Om {{the_title()}}</h4>
                 <!-- Facts -->
                 @if(isset($facts))
 
@@ -108,8 +89,15 @@
                     @endif
                 @endif
 
-
+                    @if(isset($links) && is_array($links) && !empty($links))
+                        <div class="btn-group btn-stack">
+                            @foreach($links as $linkItem)
+                                <a href="{{$linkItem['link_url']}}" class="btn btn-primary btn-block">{{$linkItem['link_label']}}</a>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
+
 
                 </div>
 
@@ -125,19 +113,8 @@
                         @endforeach
                     </ul>
                 @endif
-
-
-
-
         </aside>
-
-    </div>
-
-    <div class="grid hidden-lg hidden-xl">
-        <div class="grid-sm-12">
-            @include('partials.page-footer')
-        </div>
     </div>
 </div>
-
+</div>
 @stop
