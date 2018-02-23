@@ -5,6 +5,9 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
+        .main-footer {
+            border-color: $primary;
+        }
         .main-footer .logotype svg {
             path {
                 fill: $primary !important;
