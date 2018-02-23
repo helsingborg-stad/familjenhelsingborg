@@ -1,0 +1,29 @@
+.u-elements {
+    > *:not(.u-elements__skip) {
+        margin-bottom: $element-space;
+    }
+
+    &.u-elements--large > *:not(.u-elements__skip) {
+        margin-bottom: $element-space-large;
+    }
+
+    &.u-elements--small > *:not(.u-elements__skip) {
+        margin-bottom: $element-space-small;
+    }
+
+    &.has-elements > *:last-child {
+        margin-bottom: 0;
+    }
+
+    &.has-elements > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.u-element {
+    margin-bottom: $element-space;
+
+    &.u-element--large {
+        margin-bottom: $element-space-large;
+    }
+}

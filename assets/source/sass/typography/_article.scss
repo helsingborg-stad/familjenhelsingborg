@@ -1,22 +1,3 @@
-/* ==========================================================================
-   Overrides
-   ========================================================================== */
-article {
-    p {
-        margin-top: 0;
-    }
-}
-
-.mce-content-body > h1:first-of-type,
-article > h1:first-of-type {
-    margin-top: -0.25rem;
-}
-/* ==========================================================================
-   New styles
-   ========================================================================= */
-
-
-//Spacing
 .s-article-content {
   > * + * {
       margin-top: 1.5em;
@@ -39,6 +20,10 @@ article > h1:first-of-type {
   > * + h6 {
     margin-top: 2.25em;
   }
+
+  .mod-index {
+    margin-bottom: -30px;
+  }
 }
 
 
@@ -46,8 +31,18 @@ article > h1:first-of-type {
 .s-article-content, article.section-article {
     font-size: ms(1);
 
-    @media all and #{$screen-lg} {
+    @media all and #{$screen-md-up} {
         font-size: ms(2);
+    }
+
+    .lead {
+        font-weight: 500;
+        font-size: ms(1);
+        color: black;
+
+        @media all and #{$screen-lg} {
+            font-size: ms(2);
+        }
     }
 
     .btn {
@@ -74,3 +69,18 @@ hr.divider {
   margin-top: $element-space;
   margin-bottom: $element-space;
 }
+
+.s-article-content, article.section-article {
+    font-family: $secondary-stack;
+
+    .box {
+        font-family: $primary-stack;
+    }
+}
+
+.c-article {
+    > p {
+        max-width: 37rem;
+    }
+}
+

@@ -1,3 +1,7 @@
+.box {
+    font-size: $font-size-body;
+}
+
 #main-content {
     //Reset background, borders, box-shadow from element-level/child items
     .box, .box-panel, .box-panel-secondary {

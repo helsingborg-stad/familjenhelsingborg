@@ -1,21 +1,3 @@
-/* ==========================================================================
-   Overrides
-   ========================================================================== */
-#{$heading-elems} {
-    font-family: $primary-stack;
-    font-weight: bold;
-
-    padding-bottom: 0;
-    margin-top: 0;
-
-    & + p.sub {
-        margin-top: 0;
-    }
-}
-
-/* ==========================================================================
-   New styles
-   ========================================================================== */
 #{$heading-elems} {
     &:not([class^="box-"]):not([class*=" box-"]) + ol:first-of-type,
     &:not([class^="box-"]):not([class*=" box-"]) + ul:first-of-type,
@@ -46,7 +28,7 @@ article {
         font-weight: 900;
 
         @media screen and #{$screen-md-up} {
-            font-size: ms(5, 1em);
+            font-size: ms(4, 1em);
         }
     }
 
@@ -58,35 +40,14 @@ article {
         }
     }
 
-    h3, .h3 {
-        font-size: ms(0, 1em);
-
-        @media screen and #{$screen-sm-up} {
-            font-size: ms(0, 1em);
-        }
-    }
-
-    h4, .h4 {
-        font-size: ms(0, 1em);
-
-        @media screen and #{$screen-sm-up} {
-            font-size: ms(1, 1em);
-        }
-    }
-
-    h5, .h5 {
-        font-size: ms(0, 1em);
-
-        @media screen and #{$screen-sm-up} {
-            font-size: ms(0, 1em);
-        }
-    }
-
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
     h6, .h6 {
-        font-size: ms(0, 1em);
+        font-size: ms(-1, 1em);
 
         @media screen and #{$screen-sm-up} {
-            font-size: ms(0, 1em);
+            font-size: ms(-2, 1em);
         }
     }
 }

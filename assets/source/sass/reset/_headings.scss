@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Overrides
+   ========================================================================== */
+#{$heading-elems} {
+    font-family: $primary-stack;
+    font-weight: bold;
+
+    padding-bottom: 0;
+    margin-top: 0;
+
+    & + p.sub {
+        margin-top: 0;
+    }
+}

@@ -1,12 +1,13 @@
-$element-space: 45px;
-$element-space-large: 60px + 45px;
-$element-space-small: 15px;
+$element-space: $content-gutter * 2; //30px
+$element-space-large: $element-space * 2; //60px
+$element-space-small: $element-space / 2; //15px
 
-$section-space: $element-space-large;
-$section-space-bottom: $section-space - $element-space;
+$section-space: $element-space * 3; //90px
 
-$content-spacing: 1.5em;
-$content-spacing-large: 2.25em;
-$content-spacing-small: 0.5em;
+
+
+$content-spacing: 1.5rem;
+$content-spacing-large: 2.25rem;
+$content-spacing-small: 0.5rem;
 
 

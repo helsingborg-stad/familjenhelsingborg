@@ -7,16 +7,16 @@
     margin-top: 0;
     border-top: none;
 
-    padding:  #{$content-gutter * 7} 0;
-    padding-bottom: $content-gutter * 5;
+    padding:  #{$section-space + 35px} 0;
+    padding-bottom: $section-space - $element-space;
 
     p, ul, ol, {
         font-family: $primary-stack;
     }
 
-    border-bottom: solid 30px $grey;
+    border-bottom: solid $element-space $grey;
 
-    @media screen and #{$screen-md-up} {
+    @media screen and #{$screen-lg-up} {
         div[class^="modularity-mod-"] + div[class^="modularity-mod-"] {
             position: relative;
             &:before {
@@ -29,5 +29,21 @@
                 background: $grey;
             }
         }
+
+        div[class^="modularity-mod-"] .box {
+            padding: 0 $element-space-small;
+        }
+
+        div[class^="modularity-mod-"]:first-child .box {
+            padding-left: 0;
+        }
+
+        div[class^="modularity-mod-"]:last-child .box {
+            padding-right: 0;
+        }
+    }
+
+    .sidebar-footer-area > * {
+        margin-bottom: $element-space;
     }
 }

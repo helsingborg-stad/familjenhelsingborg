@@ -1,0 +1,8 @@
+.u-block {
+    padding-top: $section-space;
+    padding-bottom: $section-space;
+
+    &.has-elements {
+        padding-bottom: $section-space - $element-space;
+    }
+}

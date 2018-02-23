@@ -1,3 +1,15 @@
+.box {
+    margin-bottom: $element-space;
+
+    &, p, .box-content {
+        font-size: $font-size-body;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: ms(1);
+    }
+}
+
 #main-content {
     //Common styling
     .box {
@@ -7,20 +19,6 @@
 
         .box-content {
             padding: $content-gutter*1.5 $content-gutter*2;
-        }
-    }
-
-    //Reduce padding if img is present
-    //.box > .box-image-container + * {
-        //padding-top: $content-gutter*1.5;
-    //}
-
-    //Remove icon
-    .box .link-item {
-        //left: 0;
-
-        &:before {
-            color: inherit;
         }
     }
 
@@ -44,5 +42,15 @@
     }
 }
 
+.main-footer .box {
+    font-size: $font-size-small;
+    line-height: 1.5;
 
+    &, p, .box-content {
+        font-size: $font-size-small;
+    }
 
+    h1, h2, h3, h4, h5, h6, .box-title {
+        font-size: ms(1, 1em);
+    }
+}

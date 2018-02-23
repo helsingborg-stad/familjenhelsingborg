@@ -1,7 +1,13 @@
-.hero + .main-content .breadcrumbs-wrapper {
-    padding-top: $content-gutter * 2;
-}
-
 .breadcrumbs-wrapper {
     margin-bottom: $content-gutter * 3;
+}
+
+.breadcrumbs {
+    margin: $element-space-small 0 $element-space-small 0;
+    line-height: $element-space;
+}
+
+.hero + .main-content .breadcrumbs-wrapper {
+    padding-top: $element-space-small;
+    margin-bottom: -$element-space-small;
 }

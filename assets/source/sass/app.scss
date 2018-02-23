@@ -39,7 +39,6 @@
 @import 'config/elements';
 @import 'config/box';
 @import 'config/colors';
-@import 'config/layout';
 @import 'config/container';
 @import 'config/typography';
 
@@ -51,13 +50,16 @@
 // ***************************************************************
 // *** Common
 // ***************************************************************
-//@import 'master';
+@import 'master';
 
 .is-child-theme {
     //Reset
     //@import 'reset/reset';
     @import 'reset/breadcrumbs';
     @import 'reset/box';
+    @import 'reset/article';
+    @import 'reset/headings';
+    @import 'reset/button';
 
     //Typography
     @import 'typography/document';
@@ -65,14 +67,13 @@
     @import 'typography/article';
     @import 'typography/lead';
     @import 'typography/sections';
-    @import 'typography/secondary-stack';
 
     //Layout
     @import 'layout/container';
     @import 'layout/main';
     @import 'layout/footer';
     @import 'layout/sidebar';
-    @import 'layout/article';
+    @import 'layout/grid';
     @import 'layout/lg-grid';
 
     //Objects
@@ -91,6 +92,13 @@
     @import 'components/box/box-news';
     @import 'components/cookie/notice';
     @import 'components/gallery/gallery';
+    @import 'components/navigation/scroll-elevator';
+    @import 'components/button/button-stack';
+
+    //Utility
+    @import 'utility/block';
+    @import 'utility/elements';
+    @import 'utility/padding';
 
     //Color themes
     @import 'color/header';

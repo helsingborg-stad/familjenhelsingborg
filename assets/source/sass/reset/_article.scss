@@ -1,0 +1,16 @@
+article {
+    p {
+        margin-top: 0;
+    }
+
+    margin-bottom: 0;
+}
+
+.mce-content-body > h1:first-of-type,
+article > h1:first-of-type {
+    margin-top: -0.25rem;
+}
+
+.mce-content-body, article {
+    margin-bottom: $element-space-large;
+}
