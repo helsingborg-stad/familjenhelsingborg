@@ -1,0 +1,8 @@
+.c-element-spacing > *:not(last-child) {
+    margin-bottom: $element-space;
+}
+
+
+.c-element-spacing--large > * {
+    margin-bottom: $element-space-large;
+}
