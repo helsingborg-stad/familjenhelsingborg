@@ -1,19 +1,4 @@
 .main-content {
     background-color: #f9f9f9;
-    padding-bottom: $content-gutter * 6;
 }
 
-
-@media screen and #{$screen-lg-up} {
-    .main-container > .grid {
-
-        > [class*="grid-"] {
-            padding-left: $content-gutter * 2;
-            padding-right: $content-gutter * 2;
-        }
-
-        margin-left: $content-gutter * -1;
-        margin-right: $content-gutter * -1;
-
-    }
-}

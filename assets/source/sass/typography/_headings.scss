@@ -42,51 +42,51 @@ article {
     }
 
     h1, .h1 {
-        font-size: ms(4);
+        font-size: ms(2, 1em);
         font-weight: 900;
 
         @media screen and #{$screen-md-up} {
-            font-size: ms(6);
+            font-size: ms(5, 1em);
         }
     }
 
     h2, .h2 {
-        font-size: ms(1);
+        font-size: ms(0, 1em);
 
         @media screen and #{$screen-md-up} {
-            font-size: ms(2);
+            font-size: ms(0, 1em);
         }
     }
 
     h3, .h3 {
-        font-size: ms(0);
+        font-size: ms(0, 1em);
 
         @media screen and #{$screen-sm-up} {
-            font-size: ms(1);
+            font-size: ms(0, 1em);
         }
     }
 
     h4, .h4 {
-        font-size: ms(0);
+        font-size: ms(0, 1em);
 
         @media screen and #{$screen-sm-up} {
-            font-size: ms(1);
+            font-size: ms(1, 1em);
         }
     }
 
     h5, .h5 {
-        font-size: ms(0);
+        font-size: ms(0, 1em);
 
         @media screen and #{$screen-sm-up} {
-            font-size: ms(0);
+            font-size: ms(0, 1em);
         }
     }
 
     h6, .h6 {
-        font-size: ms(0);
+        font-size: ms(0, 1em);
 
         @media screen and #{$screen-sm-up} {
-            font-size: ms(0);
+            font-size: ms(0, 1em);
         }
     }
 }

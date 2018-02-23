@@ -65,3 +65,12 @@ article.section-article {
     margin-top: $content-gutter;
   }
 }
+
+
+hr.divider {
+  background-color: $content-border;
+  height: 1px;
+
+  margin-top: $element-space;
+  margin-bottom: $element-space;
+}

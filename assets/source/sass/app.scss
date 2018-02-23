@@ -40,6 +40,8 @@
 @import 'config/box';
 @import 'config/colors';
 @import 'config/layout';
+@import 'config/container';
+@import 'config/typography';
 
 // ***************************************************************
 // *** Tools / Mixins
@@ -49,11 +51,13 @@
 // ***************************************************************
 // *** Common
 // ***************************************************************
-@import 'master';
+//@import 'master';
 
 .is-child-theme {
     //Reset
     //@import 'reset/reset';
+    @import 'reset/breadcrumbs';
+    @import 'reset/box';
 
     //Typography
     @import 'typography/document';
@@ -68,13 +72,14 @@
     @import 'layout/main';
     @import 'layout/footer';
     @import 'layout/sidebar';
-
+    @import 'layout/article';
     @import 'layout/lg-grid';
 
     //Objects
     //@import 'objects/object';
 
     //Components
+    @import 'components/section/section';
     @import 'components/navigation/sidebar-menu';
     @import 'components/feedback/customer-feedback';
     @import 'components/breadcrumbs/breadcrumbs';

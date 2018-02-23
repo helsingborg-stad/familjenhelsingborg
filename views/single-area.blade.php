@@ -2,14 +2,14 @@
 
 @section('content')
 
-<div class="container main-container">
+<div class="container main-container c-element-spacing c-element-spacing--large">
 
     @include('partials.breadcrumbs')
 
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
 
-        <div class="grid-md-8 grid-lg-7 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
-
+        <div class="grid-md-7 grid-sm-12 grid-xs-12 grid-print-12" id="readspeaker-read">
+            <div class="c-content-width">
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
@@ -48,24 +48,36 @@
             @endif
 
             @include('partials.page-footer')
-
+</div>
         </div>
 
-        <aside class="grid-lg-5 grid-md-4 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar s-secondary-content">
+        <aside class="grid-md-5 grid-sm-12 grid-xs-12 grid-print-12 sidebar-right-sidebar s-secondary-content">
+                <div class="box">
+                <!-- Map -->
+                @if(isset($location) && is_array($location) && isset($location['address']))
+                    <div class="area-map c-area-map t-area-map ratio-4-3">
+                        <div id="areaMap" class="ratio-4-3" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0"></div>
+                        <script>
+                          function areaInitMap() {
+                            var map = new google.maps.Map(document.getElementById('areaMap'), {
+                              zoom: 11,
+                              center: {lat: {{$location['lat']}}, lng: {{$location['lng']}}},
+                              disableDefaultUI: true
+                            });
 
-                <!-- Region images -->
-                @if(isset($images) && is_array($images) && !empty($images))
-                    <ul class="c-gallery c-gallery--sidebar">
-                        @foreach($images as $image)
-                            <li class="c-gallery__item">
-                                <a class="box lightbox-trigger c-gallery__box" href="{{$image['large']}}">
-                                    <img alt="{{$image['caption']}}" src="{{$image['thumbnail']}}"/>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+                            var marker = new google.maps.Marker({
+                              position: {lat: {{$location['lat']}}, lng: {{$location['lng']}}},
+                              map: map,
+                              title: '!'
+                            });
+
+                          }
+                        </script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap"></script>
+                    </div>
                 @endif
 
+                <div class="box-content">
                 <!-- Facts -->
                 @if(isset($facts))
 
@@ -96,29 +108,26 @@
                     @endif
                 @endif
 
-                <!-- Map -->
-                @if(isset($location) && is_array($location) && isset($location['address']))
-                    <div class="area-map c-area-map t-area-map ratio-4-3">
-                        <div id="areaMap" class="ratio-4-3" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0"></div>
-                        <script>
-                          function areaInitMap() {
-                            var map = new google.maps.Map(document.getElementById('areaMap'), {
-                              zoom: 11,
-                              center: {lat: {{$location['lat']}}, lng: {{$location['lng']}}},
-                              disableDefaultUI: true
-                            });
 
-                            var marker = new google.maps.Marker({
-                              position: {lat: {{$location['lat']}}, lng: {{$location['lng']}}},
-                              map: map,
-                              title: '!'
-                            });
+                </div>
 
-                          }
-                        </script>
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcTrRdDFsoCu3bNbfBMU5Me1-9iqChOM8&callback=areaInitMap"></script>
-                    </div>
+                </div>
+
+                <!-- Region images -->
+                @if(isset($images) && is_array($images) && !empty($images))
+                    <ul class="c-gallery c-gallery--sidebar">
+                        @foreach($images as $image)
+                            <li class="c-gallery__item">
+                                <a class="box lightbox-trigger c-gallery__box" href="{{$image['large']}}">
+                                    <img alt="{{$image['caption']}}" src="{{$image['thumbnail']}}"/>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 @endif
+
+
+
 
         </aside>
 

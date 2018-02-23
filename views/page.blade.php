@@ -2,15 +2,15 @@
 
 @section('content')
 
-<div class="container main-container">
+<div class="container main-container c-element-spacing c-element-spacing--large">
 
     @include('partials.breadcrumbs')
 
     <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
         @include('partials.sidebar-left')
 
-        <div class="grid-md-8 grid-lg-8 grid-print-12" id="readspeaker-read">
-
+        <div class="grid-md-12 grid-lg-8 grid-print-12" id="readspeaker-read">
+        <div class="c-element-spacing c-element-spacing">
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
@@ -32,6 +32,7 @@
             <div class="hidden-xs hidden-sm hidden-md hidden-print">
                 @include('partials.page-footer')
             </div>
+        </div>
         </div>
 
 

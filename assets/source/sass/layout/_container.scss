@@ -1,7 +1,18 @@
 .container:not(.container-fullwidth) {
+    width: 85%;
+    max-width: $container-max-width-small;
+    margin: auto;
 
+    @media all and #{$screen-md-up} {
+
+        width: 95%;
+        max-width: 36rem;
+    }
+
+    @media all and #{$screen-lg-up} {
+        max-width: $container-max-width;
+    }
 }
 
-.container.main-container:not(.container-fullwidth) {
+//.container.main-container:not(.container-fullwidth) {}
 
-}

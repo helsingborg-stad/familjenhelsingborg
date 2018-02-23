@@ -1,14 +1,15 @@
-.nav-accessibility {
-    margin-top: $content-gutter;
-    margin-bottom: $content-gutter * 1.5;
+.nav.nav-help.nav-accessibility.nav-horizontal {
+    margin-top: $content-spacing-small;
+    margin-bottom: $content-spacing-large;
+    font-size: $font-size-fixed-small;
 }
-
 
 .nav-accessibility a {
 
     font-family: $primary-stack;
     @include antialias();
     color: inherit;
+    font-size: inherit;
 
     &:before, i {
         font-weight: 400;
@@ -18,3 +19,7 @@
 .nav-accessibility a:before, .nav-accessibility a i {
     margin-right: $content-gutter/4;
 }
+
+
+
+
