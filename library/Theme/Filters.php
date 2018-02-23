@@ -8,6 +8,15 @@ class Filters
     {
         //Fixes classes on sidebar boxes
         add_filter('Modularity/Module/Classes', array($this, 'moduleClasses'), 15, 3);
+
+        add_filter('Modularity/Widget/ColumnWidth', array($this, 'widgetColumnWidth'), 15, 2);
+    }
+
+    public function widgetColumnWidth($class, $instance)
+    {
+        $class = str_replace('md', 'lg', $class);
+
+        return $class;
     }
 
     /**
