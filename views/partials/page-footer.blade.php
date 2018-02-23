@@ -1,5 +1,4 @@
 <?php do_action('customer-feedback'); ?>
-<hr class="divider">
 <footer class="page-footer">
 
     @if (get_field('post_show_share', get_the_id()) !== false && get_field('page_show_share', 'option') !== false)
