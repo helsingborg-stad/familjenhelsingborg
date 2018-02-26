@@ -70,7 +70,7 @@ hr.divider {
   margin-bottom: $element-space;
 }
 
-.s-article-content, article.section-article {
+.s-article-content, article:not(.section-article) {
     font-family: $secondary-stack;
 
     .box {
