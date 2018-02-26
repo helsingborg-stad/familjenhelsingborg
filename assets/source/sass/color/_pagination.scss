@@ -1,0 +1,27 @@
+@each $color, $value in $color-theme {
+    //Colors
+    $primary: map-get($value, primary);
+    $accent: map-get($value, accent);
+
+    //Color scope styles
+    &.s-custom-color-#{$color} {
+        .page-numbers .current.current,
+        .page-numbers .current:focus,
+        .page-numbers .current:hover,
+        .page-numbers a.current,
+        .page-numbers a:focus,
+        .page-numbers a:hover,
+        .pagination .current.current,
+        .pagination .current:focus,
+        .pagination .current:hover,
+        .pagination a.current,
+        .pagination a:focus,
+        .pagination a:hover {
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+
+
