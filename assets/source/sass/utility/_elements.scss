@@ -26,6 +26,10 @@
     &.u-element--large {
         margin-bottom: $element-space-large;
     }
+
+    &.u-element--small {
+        margin-bottom: $element-space-small;
+    }
 }
 
 .u-offset-element {
