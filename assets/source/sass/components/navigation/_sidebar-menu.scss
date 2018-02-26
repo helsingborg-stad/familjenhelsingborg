@@ -42,8 +42,8 @@ ul.sub-menu {
     background: transparentize(lighten(black, 90%), .66);
 }
 
-li.current-menu-item,
-ul.sub-menu li {
+li.current-menu-item > a,
+ul.sub-menu li > a {
     text-indent: -10px;
 }
 
