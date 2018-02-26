@@ -6,4 +6,19 @@
     &.c-header--top a {
         font-size: 14px;
     }
+
+    &.c-header--bottom a {
+        font-weight: bold;
+
+        &:hover, &:focus, &:active {
+            background: rgba(black, 0.03);
+            text-decoration: none;
+        }
+    }
 }
+
+.c-navbar .c-navbar__item.is-current:after, .c-navbar .c-navbar__item.is-current-ancestor:not(.c-navbar__sub):after {
+    border-bottom-color: #f9f9f9;
+}
+
+
