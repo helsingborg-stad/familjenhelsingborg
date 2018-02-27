@@ -1,6 +1,7 @@
 .box {
     margin-bottom: $element-space;
 
+
     &, p, .box-content {
         font-size: $font-size-body;
     }
@@ -23,6 +24,7 @@
     //Common styling
     .box {
         box-shadow: 0 2px 3px rgba(0,0,0,.08);
+        border: solid 1px $border-color;
         background: white;
         border-radius: 2px;
 
@@ -40,7 +42,8 @@
 
     .box-panel.box-panel-secondary {
         .box-title {
-            border-bottom: solid 2px rgba(black, 0.05);
+            border-bottom: solid 1px $border-color;
+            padding-bottom: 15px;
         }
     }
 
@@ -62,4 +65,12 @@
     h1, h2, h3, h4, h5, h6, .box-title {
         font-size: ms(1, 1em);
     }
+}
+.nav-aside li + li {
+    border-top: solid 1px $border-color
+}
+
+
+.box-panel > ul:not(.social-feed-gallery):not(.accordion) li + li:not(.timeline-event), .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li:not(.timeline-event), .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) li + li:not(.timeline-event) {
+    border-color: $border-color;
 }

@@ -1,7 +1,20 @@
 ul.nav-aside {
     background-color: #fff;
     box-shadow: 0 2px 3px rgba(0,0,0,.08);
+    border: solid 1px $border-color;
     border-radius: 2px;
+
+    li {
+        border-color: $border-color;
+    }
+}
+
+.nav-aside .sub-menu, .nav-aside .children, .nav-mobile .sub-menu, .nav-mobile .children {
+    border-color: $border-color;
+}
+
+.nav-aside [data-load-submenu] {
+    outline: 1px solid $border-color;
 }
 
 .box ul.nav-aside {
