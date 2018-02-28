@@ -56,7 +56,7 @@
             </aside>
         </div>
 
-        <div class="grid no-margin-top">
+        <div class="grid">
             <div class="grid-xs-12">
                 <div class="box">
                     <div class="grid no-margin">
