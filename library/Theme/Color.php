@@ -30,6 +30,10 @@ class Color
         //Apply color scheme
         if (isset($color) && !is_null($color) && !empty($color)) {
             $classes[] = "s-custom-color-" . $color;
+        } elseif (is_post_type_archive('area') ||is_singular('area')) {
+            $classes[] = "s-custom-color-orange";
+        } elseif (is_post_type_archive('nyheter') ||is_singular('nyheter')) {
+            $classes[] = "s-custom-color-purple";
         } else {
             $classes[] = "s-custom-color-blue";
         }
