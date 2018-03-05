@@ -2,7 +2,8 @@ ul.nav-aside {
     background-color: #fff;
     box-shadow: 0 2px 3px rgba(0,0,0,.08);
     border: solid 1px $border-color;
-    border-radius: 2px;
+    border-radius: 10px 0 10px 10px;
+    overflow: hidden;
 
     li {
         border-color: $border-color;
