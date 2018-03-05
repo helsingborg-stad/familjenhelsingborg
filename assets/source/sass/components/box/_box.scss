@@ -1,7 +1,6 @@
 .box {
     margin-bottom: $element-space;
 
-
     &, p, .box-content {
         font-size: $font-size-body;
     }
@@ -26,7 +25,7 @@
         box-shadow: 0 2px 3px rgba(0,0,0,.08);
         border: solid 1px $border-color;
         background: white;
-        border-radius: 2px;
+        border-radius: 10px 0 10px 10px;
 
         .box-content {
             padding: $content-gutter*1.5 $content-gutter*2;
