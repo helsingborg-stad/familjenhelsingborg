@@ -14,7 +14,6 @@
 
         .c-navbar .c-navbar__item a {
             padding: 10px 15px;
-            background: rgba(black, 0.15);
         }
     }
 
@@ -31,5 +30,3 @@
 .c-navbar .c-navbar__item.is-current:after, .c-navbar .c-navbar__item.is-current-ancestor:not(.c-navbar__sub):after {
     border-bottom-color: #f9f9f9;
 }
-
-

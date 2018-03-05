@@ -9,8 +9,12 @@
             background-color: $primary;
         }
 
+        .t-familjen-helsingborg.c-header--top .c-navbar {
+            background-color: darken($primary, 7%);
+        }
+
         .t-familjen-helsingborg.c-header--bottom {
-            background-color: darken($primary, 5%);
+            background-color: darken($primary, 7%);
         }
 
         .t-familjen-helsingborg.c-header__logo svg {
