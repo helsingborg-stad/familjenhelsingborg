@@ -10,12 +10,7 @@
         }
 
         .t-familjen-helsingborg.c-header--bottom {
-            border-top: 4px solid $primary;
-        }
-
-        .t-familjen-helsingborg.c-header--bottom .is-current a,
-        .t-familjen-helsingborg.c-header--bottom .is-current-ancestor a {
-            color: $primary;
+            background-color: darken($primary, 5%);
         }
 
         .t-familjen-helsingborg.c-header__logo svg {
