@@ -26,6 +26,7 @@
         border: solid 1px $border-color;
         background: white;
         border-radius: 10px 0 10px 10px;
+        overflow: hidden;
 
         .box-content {
             padding: $content-gutter*1.5 $content-gutter*2;
