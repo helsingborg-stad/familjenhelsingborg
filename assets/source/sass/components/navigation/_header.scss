@@ -6,6 +6,9 @@
     &.c-header--top {
         a {
             font-size: 14px;
+            font-weight: bold;
+            @include antialias();
+
         }
         .c-navbar {
             margin-top: -11.25px;
@@ -19,6 +22,8 @@
 
     &.c-header--bottom a {
         font-weight: bold;
+        font-size: 19px;
+        @include antialias();
 
         &:hover, &:focus, &:active {
             background: rgba(black, 0.03);

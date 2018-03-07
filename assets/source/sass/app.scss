@@ -69,7 +69,7 @@
     @import 'typography/sections';
 
     //Layout
-    @import 'layout/container';
+    //@import 'layout/container';
     @import 'layout/main';
     @import 'layout/footer';
     @import 'layout/sidebar';
@@ -112,6 +112,7 @@
     @import 'color/feed';
     @import 'color/box';
     @import 'color/pagination';
+    @import 'color/main';
 }
 
 h1, h2, h3, h4, h5, h6 {
