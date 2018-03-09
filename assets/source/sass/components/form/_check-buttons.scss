@@ -1,0 +1,24 @@
+.c-check-buttons {
+    > li + li {
+        margin-top: 2px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        padding: $content-gutter/2 $content-gutter;
+        background: lighten(black, 90%);
+        display: block;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    input[type=checkbox]:checked + label {
+        background: $familjen-blue;
+        color: white;
+    }
+}

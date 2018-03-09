@@ -1,0 +1,37 @@
+.c-archive-filter--left {
+
+}
+
+.c-filter {
+    .c-filter__heading + .c-filter__options {
+        margin-top: 5px;
+    }
+
+    .c-filter__title:before {
+        content: '';
+        width: $content-gutter * 2;
+        height: $content-gutter * 2;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: $content-gutter;
+    }
+}
+
+.c-filter.c-filter--infrastructure .c-filter__title:before {
+    @extend %o-icon-transport;
+}
+.c-filter.c-filter--nature .c-filter__title:before {
+    @extend %o-icon-landscape;
+}
+.c-filter.c-filter--community .c-filter__title:before {
+    @extend %o-icon-cityscape;
+}
+.c-filter.c-filter--facility .c-filter__title:before{
+    @extend %o-icon-shopping-bag;
+}
+
+
+
+

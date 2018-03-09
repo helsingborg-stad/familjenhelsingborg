@@ -1,4 +1,7 @@
 .main-content {
-    background-color: #f9f9f9;
     display: block;
+}
+
+.container.main-container {
+    margin-bottom: $section-space;
 }

@@ -5,6 +5,9 @@ class App
 {
     public function __construct()
     {
+        new \FamiljenHbg\Theme\CustomizerFeatures();
+        new \FamiljenHbg\Admin\ArchiveOptions();
+        new \FamiljenHbg\Theme\CustomizerFeatures();
         new \FamiljenHbg\Theme\Enqueue();
         new \FamiljenHbg\Theme\Color();
         new \FamiljenHbg\Theme\Authors();

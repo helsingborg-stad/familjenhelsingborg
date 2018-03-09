@@ -29,12 +29,6 @@
 
 //Copy
 .s-article-content, article.section-article {
-    font-size: ms(0);
-
-    @media all and #{$screen-md-up} {
-        font-size: ms(1);
-    }
-
     .lead {
         font-weight: bold;
         font-size: ms(1);

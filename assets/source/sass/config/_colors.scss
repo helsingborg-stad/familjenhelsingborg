@@ -9,31 +9,38 @@ $familjen-turquoise: #2699ad;
 $color-theme: (
     blue: (
         primary: $familjen-blue,
-        accent: $familjen-orange
+        accent: $familjen-orange,
+        background: #FBFDFF
     ),
     yellow: (
         primary: $familjen-yellow,
-        accent: $familjen-orange
+        accent: $familjen-orange,
+        background: #FBFDFF
     ),
     purple: (
         primary: $familjen-purple,
-        accent: $familjen-orange
+        accent: $familjen-orange,
+        background: lighten($familjen-purple, 66%)
     ),
     grey: (
         primary: $familjen-grey,
-        accent: $familjen-orange
+        accent: $familjen-orange,
+        background: #FBFDFF
     ),
     orange: (
         primary: $familjen-orange,
-        accent: $familjen-turquoise
+        accent: $familjen-turquoise,
+        background: lighten($familjen-orange, 47%)
     ),
     pink: (
         primary: $familjen-pink,
-        accent: $familjen-blue
+        accent: $familjen-blue,
+        background:  lighten($familjen-pink, 52%)
     ),
     turquoise: (
         primary: $familjen-turquoise,
-        accent: $familjen-orange
+        accent: $familjen-orange,
+        background: lighten($familjen-turquoise, 58%)
     )
 );
 
