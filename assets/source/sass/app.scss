@@ -77,7 +77,7 @@
     @import 'layout/lg-grid';
 
     //Objects
-    //@import 'objects/object';
+    @import 'objects/icon';
 
     //Components
     @import 'components/section/section';
@@ -87,6 +87,7 @@
     @import 'components/navigation/accessability-nav';
     @import 'components/navigation/header';
     @import 'components/form/form';
+    @import 'components/form/check-buttons';
     @import 'components/accordion/accordion';
     @import 'components/notice/notice';
     @import 'components/box/box';
@@ -95,6 +96,7 @@
     @import 'components/gallery/gallery';
     @import 'components/navigation/scroll-elevator';
     @import 'components/button/button-stack';
+    @import 'components/filter/filter';
 
     //Utility
     @import 'utility/block';
