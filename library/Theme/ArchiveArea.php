@@ -25,8 +25,20 @@ class ArchiveArea
         add_action('loop_start', array($this, 'queryInfo'));
     }
 
-    public function queryInfo()
+    public function queryInfo($query)
     {
+        if (!$query->is_main_query() || !isset($query->query['post_type'])) {
+            return;
+        }
+
+        if ($query->query['post_type'] != "area") {
+            return;
+        }
+
+        if (is_single()) {
+            return;
+        }
+
         $terms = \Municipio\Helper\Query::getTaxQueryTerms();
 
         if (isset($terms) && is_array($terms) && !empty($terms)) {
