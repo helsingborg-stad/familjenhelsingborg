@@ -28,9 +28,21 @@ class ArchiveArea
     public function queryInfo()
     {
         $terms = \Municipio\Helper\Query::getTaxQueryTerms();
+
+        if (isset($terms) && is_array($terms) && !empty($terms)) {
+            $termNames = array();
+
+            foreach ($terms as $term) {
+                $termNames[] = $term->name;
+            }
+
+            $termString = implode($termNames, ', ');
+        }
+
         $query = \Municipio\Helper\Query::getPaginationData();
 
-        $output = __('Showing','familjen-hbg');
+        $output = '<p>';
+        $output .= __('Showing','familjen-hbg');
         $output .= ' ';
         $output .= $query['postCount'];
         $output .= ' ';
@@ -38,7 +50,18 @@ class ArchiveArea
         $output .= ' ';
         $output .= $query['postTotal'];
         $output .= ' ';
-        $output .= get_post_type_labels(get_post_type_object(get_post_type()))->name;
+        $output .= strtolower(get_post_type_labels(get_post_type_object(get_post_type()))->name);
+
+        if (isset($termString) && $termString) {
+            $output .= ' ';
+            $output .= __('based on', 'familjen-hbg');
+            $output .= ' ';
+            $output .= __('your choices', 'familjen-hbg');
+            $output .= ': ';
+            $output .= '<b> ' . $termString . '</b>';
+        }
+
+        $output .= '</p>';
 
         echo '<div class="grid-xs-12 u-element">' . $output . '</div>';
     }

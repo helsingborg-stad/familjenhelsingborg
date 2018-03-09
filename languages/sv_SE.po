@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-03-09 10:03+0100\n"
-"PO-Revision-Date: 2018-03-09 10:03+0100\n"
+"POT-Creation-Date: 2018-03-09 10:27+0100\n"
+"PO-Revision-Date: 2018-03-09 10:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -64,13 +64,21 @@ msgstr "Turkos"
 msgid "Read more about this location:"
 msgstr "Läs mer om den här platsen: "
 
-#: library/Theme/ArchiveArea.php:32
+#: library/Theme/ArchiveArea.php:44
 msgid "Showing"
 msgstr "Visar"
 
-#: library/Theme/ArchiveArea.php:36
+#: library/Theme/ArchiveArea.php:48
 msgid "of"
 msgstr "Av"
+
+#: library/Theme/ArchiveArea.php:56
+msgid "based on"
+msgstr "som matchar dina"
+
+#: library/Theme/ArchiveArea.php:58
+msgid "your choices"
+msgstr "val"
 
 #: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
 msgid "Export with AcfExportManager"
