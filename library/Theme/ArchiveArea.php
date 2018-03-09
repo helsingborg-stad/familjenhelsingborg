@@ -22,6 +22,25 @@ class ArchiveArea
         $this->CACHE_PATH = WP_CONTENT_DIR . '/uploads/cache/blade-cache';
 
         add_action('loop_start', array($this, 'mapPlotData'));
+        add_action('loop_start', array($this, 'queryInfo'));
+    }
+
+    public function queryInfo()
+    {
+        $terms = \Municipio\Helper\Query::getTaxQueryTerms();
+        $query = \Municipio\Helper\Query::getPaginationData();
+
+        $output = __('Showing','familjen-hbg');
+        $output .= ' ';
+        $output .= $query['postCount'];
+        $output .= ' ';
+        $output .= strtolower(__('of', 'familjen-hbg'));
+        $output .= ' ';
+        $output .= $query['postTotal'];
+        $output .= ' ';
+        $output .= get_post_type_labels(get_post_type_object(get_post_type()))->name;
+
+        echo '<div class="grid-xs-12 u-element">' . $output . '</div>';
     }
 
     public function mapPlotData($query)
