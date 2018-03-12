@@ -22,23 +22,15 @@ class ArchiveArea
         $this->CACHE_PATH = WP_CONTENT_DIR . '/uploads/cache/blade-cache';
 
         add_action('loop_start', array($this, 'mapPlotData'));
-        add_action('loop_start', array($this, 'queryInfo'));
+        add_action('loop_start', array($this, 'outputQueryInfo'));
     }
 
-    public function queryInfo($query)
+    /**
+     * Returns comma seperated filter values (term names) when filter is active
+     * @return false|string
+     */
+    public static function getFilterValues()
     {
-        if (!$query->is_main_query() || !isset($query->query['post_type'])) {
-            return;
-        }
-
-        if ($query->query['post_type'] != "area") {
-            return;
-        }
-
-        if (is_single()) {
-            return;
-        }
-
         $terms = \Municipio\Helper\Query::getTaxQueryTerms();
 
         if (isset($terms) && is_array($terms) && !empty($terms)) {
@@ -47,43 +39,65 @@ class ArchiveArea
             foreach ($terms as $term) {
                 $termNames[] = $term->name;
             }
-
-            $termString = implode($termNames, ', ');
         }
 
-        $query = \Municipio\Helper\Query::getPaginationData();
+        if (isset($termNames) && is_array($termNames) && !empty($termNames)) {
+            return implode($termNames, ', ');
+        }
 
-        $output = '<p>';
+        return false;
+    }
 
-        if (!isset($termString) || !$termString) {
-            $output .= __('Showing','familjen-hbg');
-            $output .= ' ';
-            $output .= $query['postCount'];
-            $output .= ' ';
-            $output .= strtolower(__('of', 'familjen-hbg'));
-            $output .= ' ';
-            $output .= $query['postTotal'];
+    /**
+     * Outputs query info (Showing x of Y posts etc) before content on area archives
+     * @return void
+     */
+    public function outputQueryInfo($query)
+    {
+        if (!$query->is_main_query() || !isset($query->query['post_type']) || $query->query['post_type'] != "area" || is_single()) {
+            return;
+        }
+
+        $postCount = \Municipio\Helper\Query::getPaginationData()['postCount'];
+        $postsTotal = \Municipio\Helper\Query::getPaginationData()['postTotal'];
+        $filterValues = self::getFilterValues();
+
+        if (isset($filterValues) && $filterValues && is_string($filterValues)) {
+            $filterValues = '<b>' . $filterValues . '</b>';
+        }
+
+        //Post type label/name
+        if (isset($postCount) && $postCount == 1 && isset($filterValues) && $filterValues) {
+            $postType = (get_post_type_labels(get_post_type_object(get_post_type()))->singular_name) ? get_post_type_labels(get_post_type_object(get_post_type()))->singular_name : __('post', 'familjen-hbg');
         } else {
-            $output .= __('Found','familjen-hbg');
-            $output .= ' ';
-            $output .= $query['postCount'];
+            $postType = (get_post_type_labels(get_post_type_object(get_post_type()))->name) ? get_post_type_labels(get_post_type_object(get_post_type()))->name : __('posts', 'familjen-hbg');
         }
 
-        $output .= ' ';
-        $output .= strtolower(get_post_type_labels(get_post_type_object(get_post_type()))->name);
+        $postType = strtolower($postType);
 
-        if (isset($termString) && $termString) {
-            $output .= ' ';
-            $output .= __('based on', 'familjen-hbg');
-            $output .= ' ';
-            $output .= __('your choices', 'familjen-hbg');
-            $output .= ': ';
-            $output .= '<b> ' . $termString . '</b>';
+        //If no posts
+        if (!isset($postCount) || !$postCount || $postCount == 0) {
+            if (isset($filterValues) && $filterValues) {
+                $output = __('Could not find any', 'familjen-hbg') . ' ' . $postType . ' ' . __('matching your choices:', 'familjen-hbg') . ' ' . $filterValues . '.';
+            } else {
+                $output = __('Could not find any', 'familjen-hbg') . ' ' . $postType . '.';
+            }
         }
 
-        $output .= '</p>';
+        //Has posts
+        if (isset($postCount) && $postCount && $postCount > 0) {
+            if (isset($filterValues) && $filterValues) {
+                $output = __('Found', 'familjen-hbg') . ' ' . $postsTotal . ' ' . $postType . ' ' . __('matching your choices:', 'familjen-hbg') . ' ' . $filterValues . '.';
+            } else {
+                $output = __('Showing', 'familjen-hbg') . ' ' . $postCount . ' ' . strtolower(__('of', 'familjen-hbg')) . ' ' . $postsTotal . ' ' . $postType . '.';
+            }
+        }
 
-        echo '<div class="grid-xs-12 u-element">' . $output . '</div>';
+        if (!isset($output) || !$output || !is_string($output)) {
+            return;
+        }
+
+        echo '<div class="grid-xs-12 u-element"><p>' . $output . '</p></div>';
     }
 
     public function mapPlotData($query)

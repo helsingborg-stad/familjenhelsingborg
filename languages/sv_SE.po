@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-03-12 10:03+0100\n"
-"PO-Revision-Date: 2018-03-12 10:03+0100\n"
+"POT-Creation-Date: 2018-03-12 16:59+0100\n"
+"PO-Revision-Date: 2018-03-12 16:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -64,25 +64,25 @@ msgstr "Turkos"
 msgid "Read more about this location:"
 msgstr "Läs mer om den här platsen: "
 
-#: library/Theme/ArchiveArea.php:59
-msgid "Showing"
-msgstr "Visar"
+#: library/Theme/ArchiveArea.php:64 library/Theme/ArchiveArea.php:66
+msgid "Could not find any"
+msgstr ""
 
-#: library/Theme/ArchiveArea.php:63
-msgid "of"
-msgstr "Av"
+#: library/Theme/ArchiveArea.php:64 library/Theme/ArchiveArea.php:73
+msgid "matching your choices:"
+msgstr "som matchar dina val:"
 
-#: library/Theme/ArchiveArea.php:67
+#: library/Theme/ArchiveArea.php:73
 msgid "Found"
 msgstr "Hittade"
 
-#: library/Theme/ArchiveArea.php:77
-msgid "based on"
-msgstr "som matchar dina"
+#: library/Theme/ArchiveArea.php:75
+msgid "Showing"
+msgstr "Visar"
 
-#: library/Theme/ArchiveArea.php:79
-msgid "your choices"
-msgstr "val"
+#: library/Theme/ArchiveArea.php:75
+msgid "of"
+msgstr "Av"
 
 #: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
 msgid "Export with AcfExportManager"
@@ -160,6 +160,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://github.com/helsingborg-stad"
 msgstr ""
+
+#~ msgid "based on"
+#~ msgstr "som matchar dina"
+
+#~ msgid "your choices"
+#~ msgstr "val"
 
 #~ msgid "Dark blue"
 #~ msgstr "Mörkblå"
