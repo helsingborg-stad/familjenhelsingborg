@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-03-09 10:27+0100\n"
-"PO-Revision-Date: 2018-03-09 10:27+0100\n"
+"POT-Creation-Date: 2018-03-12 10:03+0100\n"
+"PO-Revision-Date: 2018-03-12 10:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -64,19 +64,23 @@ msgstr "Turkos"
 msgid "Read more about this location:"
 msgstr "Läs mer om den här platsen: "
 
-#: library/Theme/ArchiveArea.php:44
+#: library/Theme/ArchiveArea.php:59
 msgid "Showing"
 msgstr "Visar"
 
-#: library/Theme/ArchiveArea.php:48
+#: library/Theme/ArchiveArea.php:63
 msgid "of"
 msgstr "Av"
 
-#: library/Theme/ArchiveArea.php:56
+#: library/Theme/ArchiveArea.php:67
+msgid "Found"
+msgstr "Hittade"
+
+#: library/Theme/ArchiveArea.php:77
 msgid "based on"
 msgstr "som matchar dina"
 
-#: library/Theme/ArchiveArea.php:58
+#: library/Theme/ArchiveArea.php:79
 msgid "your choices"
 msgstr "val"
 

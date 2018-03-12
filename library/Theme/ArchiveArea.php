@@ -54,13 +54,21 @@ class ArchiveArea
         $query = \Municipio\Helper\Query::getPaginationData();
 
         $output = '<p>';
-        $output .= __('Showing','familjen-hbg');
-        $output .= ' ';
-        $output .= $query['postCount'];
-        $output .= ' ';
-        $output .= strtolower(__('of', 'familjen-hbg'));
-        $output .= ' ';
-        $output .= $query['postTotal'];
+
+        if (!isset($termString) || !$termString) {
+            $output .= __('Showing','familjen-hbg');
+            $output .= ' ';
+            $output .= $query['postCount'];
+            $output .= ' ';
+            $output .= strtolower(__('of', 'familjen-hbg'));
+            $output .= ' ';
+            $output .= $query['postTotal'];
+        } else {
+            $output .= __('Found','familjen-hbg');
+            $output .= ' ';
+            $output .= $query['postCount'];
+        }
+
         $output .= ' ';
         $output .= strtolower(get_post_type_labels(get_post_type_object(get_post_type()))->name);
 
