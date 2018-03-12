@@ -10,7 +10,8 @@
     //Reset background, borders, box-shadow from element-level/child items
     .box, .box-panel, .box-panel-secondary {
         & > .box-content, .box-content, & > *, & > ul.nav {
-            background: initial;
+            background-image: initial;
+            background-color: initial;
             box-shadow: initial !important;
             border: initial;
             border-radius: initial !important;
