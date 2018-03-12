@@ -32,3 +32,11 @@ add_action('init', function () {
 
 //Run app
 new FamiljenHbg\App();
+
+
+add_action( 'wp', function() {
+
+    //var_dump(FamiljenHbg\Theme\ArchiveArea::queryInfo());
+    //die;
+
+});

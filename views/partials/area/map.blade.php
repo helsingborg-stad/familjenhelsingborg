@@ -11,7 +11,7 @@
 
         #areaMap {
           height: 400px;
-          margin-bottom: 60px;
+          margin-bottom: 30px;
         }
 
       </style>

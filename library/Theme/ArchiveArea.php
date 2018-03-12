@@ -22,6 +22,60 @@ class ArchiveArea
         $this->CACHE_PATH = WP_CONTENT_DIR . '/uploads/cache/blade-cache';
 
         add_action('loop_start', array($this, 'mapPlotData'));
+        add_action('loop_start', array($this, 'queryInfo'));
+    }
+
+    public function queryInfo($query)
+    {
+        if (!$query->is_main_query() || !isset($query->query['post_type'])) {
+            return;
+        }
+
+        if ($query->query['post_type'] != "area") {
+            return;
+        }
+
+        if (is_single()) {
+            return;
+        }
+
+        $terms = \Municipio\Helper\Query::getTaxQueryTerms();
+
+        if (isset($terms) && is_array($terms) && !empty($terms)) {
+            $termNames = array();
+
+            foreach ($terms as $term) {
+                $termNames[] = $term->name;
+            }
+
+            $termString = implode($termNames, ', ');
+        }
+
+        $query = \Municipio\Helper\Query::getPaginationData();
+
+        $output = '<p>';
+        $output .= __('Showing','familjen-hbg');
+        $output .= ' ';
+        $output .= $query['postCount'];
+        $output .= ' ';
+        $output .= strtolower(__('of', 'familjen-hbg'));
+        $output .= ' ';
+        $output .= $query['postTotal'];
+        $output .= ' ';
+        $output .= strtolower(get_post_type_labels(get_post_type_object(get_post_type()))->name);
+
+        if (isset($termString) && $termString) {
+            $output .= ' ';
+            $output .= __('based on', 'familjen-hbg');
+            $output .= ' ';
+            $output .= __('your choices', 'familjen-hbg');
+            $output .= ': ';
+            $output .= '<b> ' . $termString . '</b>';
+        }
+
+        $output .= '</p>';
+
+        echo '<div class="grid-xs-12 u-element">' . $output . '</div>';
     }
 
     public function mapPlotData($query)

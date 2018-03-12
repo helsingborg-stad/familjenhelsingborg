@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Familjen Helsingborg\n"
-"POT-Creation-Date: 2018-01-29 15:10+0100\n"
-"PO-Revision-Date: 2018-01-29 15:11+0100\n"
+"POT-Creation-Date: 2018-03-09 10:27+0100\n"
+"PO-Revision-Date: 2018-03-09 10:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -64,6 +64,22 @@ msgstr "Turkos"
 msgid "Read more about this location:"
 msgstr "Läs mer om den här platsen: "
 
+#: library/Theme/ArchiveArea.php:44
+msgid "Showing"
+msgstr "Visar"
+
+#: library/Theme/ArchiveArea.php:48
+msgid "of"
+msgstr "Av"
+
+#: library/Theme/ArchiveArea.php:56
+msgid "based on"
+msgstr "som matchar dina"
+
+#: library/Theme/ArchiveArea.php:58
+msgid "your choices"
+msgstr "val"
+
 #: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
 msgid "Export with AcfExportManager"
 msgstr ""
@@ -73,17 +89,40 @@ msgstr ""
 msgid "Exported %d fieldgroup(s)."
 msgstr ""
 
+#: views/archive-area.blade.php:98
+msgid "No posts to show"
+msgstr ""
+
 #: views/authors.blade.php:7
 msgid "Authors"
 msgstr "Författare"
+
+#: views/partials/archive-filters-left.blade.php:27
+#: views/partials/archive-filters-left.blade.php:30
+#: views/partials/archive-filters-left.blade.php:63
+msgid "Search"
+msgstr ""
+
+#: views/partials/archive-filters-left.blade.php:42
+msgid "Select"
+msgstr ""
+
+#: views/partials/archive-filters-left.blade.php:59
+msgid "Clear filters"
+msgstr ""
 
 #: views/partials/area/map.blade.php:43
 msgid "Read more about "
 msgstr "Läs mer om "
 
-#: views/partials/page-footer.blade.php:10
+#: views/partials/page-footer.blade.php:11
+#: views/partials/page-footer.blade.php:12
 msgid "Submit feedback on this page"
 msgstr "Lämna feedback"
+
+#: views/partials/search/algolia.blade.php:37
+msgid "Found no matching results on your search…"
+msgstr ""
 
 #: views/partials/social-share.blade.php:3
 #: views/partials/social-share.blade.php:5
@@ -93,6 +132,14 @@ msgstr "Lämna feedback"
 #: views/partials/social-share.blade.php:17
 msgid "Share on"
 msgstr "Dela på"
+
+#: views/partials/social-share.blade.php:21
+msgid "Share as e-mail"
+msgstr ""
+
+#: views/partials/social-share.blade.php:23
+msgid "Share with e-mail"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Familjen Helsingborg"
