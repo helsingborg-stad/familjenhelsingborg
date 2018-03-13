@@ -2,7 +2,8 @@ $familjen-purple-box-bg: #FCF9FF;
 $familjen-orange-box-bg: #FFF9F6;
 $familjen-blue-box-bg: #F7FCFF;
 
-.sidebar-right-sidebar .grid {
+.sidebar-right-sidebar .grid,
+.sidebar-left-sidebar .grid  {
     & > [class*="grid-"]:nth-child(5n + 1) .box {
         background-color: $familjen-purple-box-bg !important;
         border-color: darken($familjen-purple-box-bg, 3%) !important;
@@ -29,7 +30,8 @@ $familjen-blue-box-bg: #F7FCFF;
 }
 
 
-.sidebar-right-sidebar [class*="modularity-mod"] > .box {
+.sidebar-right-sidebar [class*="modularity-mod"] > .box,
+.sidebar-left-sidebar [class*="modularity-mod"] > .box {
 
     .box-content, .box-content p {
         font-size: $font-size-small;
