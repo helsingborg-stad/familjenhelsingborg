@@ -6,7 +6,7 @@
     @include('partials.archive-filters')
 @endif
 
-<div class="container main-container">
+<div class="container main-container s-archive-area">
     @include('partials.breadcrumbs')
 
     <div class="grid">

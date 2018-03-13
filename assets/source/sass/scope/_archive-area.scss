@@ -1,0 +1,23 @@
+#main-content .s-archive-area {
+    .box.box-index.box-card-post {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+
+        .box-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .box-image {
+            border-radius: 10px;
+        }
+
+        &:hover {
+            h3.text-highlight {
+                color: $familjen-orange;
+            }
+        }
+    }
+}
