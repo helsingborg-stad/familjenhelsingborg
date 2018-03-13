@@ -33,3 +33,7 @@
         margin-bottom: $content-gutter * 0.75;
     }
 }
+
+h4.box-title + .nav {
+    margin-top: -25px;
+}
