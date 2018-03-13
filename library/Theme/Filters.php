@@ -8,8 +8,18 @@ class Filters
     {
         //Fixes classes on sidebar boxes
         add_filter('Modularity/Module/Classes', array($this, 'moduleClasses'), 15, 3);
-
         add_filter('Modularity/Widget/ColumnWidth', array($this, 'widgetColumnWidth'), 15, 2);
+
+        add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
+    }
+
+    /**
+     * Show mobile menu in all but large size.
+     * @return void
+     */
+    public function mobileMenuBreakpoint($classes)
+    {
+        return "hidden-lg";
     }
 
     public function widgetColumnWidth($class, $instance)
