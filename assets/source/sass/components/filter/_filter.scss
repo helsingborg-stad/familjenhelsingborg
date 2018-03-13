@@ -1,5 +1,5 @@
 .c-archive-filter--left {
-
+    margin-bottom: 45px;
 }
 
 .c-filter {
@@ -17,7 +17,10 @@
         background-position: center;
         margin-right: $content-gutter;
     }
+
+
 }
+
 
 .c-filter.c-filter--infrastructure .c-filter__title:before {
     @extend %o-icon-transport;
