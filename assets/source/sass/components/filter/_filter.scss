@@ -2,6 +2,10 @@
     margin-bottom: 45px;
 }
 
+.c-archive-filter.is-disabled {
+    opacity: 0.4;
+}
+
 .c-filter {
     .c-filter__heading + .c-filter__options {
         margin-top: 5px;

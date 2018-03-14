@@ -19,6 +19,7 @@ FamiljenHbg.Filter.SubmitForm = (function ($) {
      */
     SubmitForm.prototype.SubmitOnChange = function () {
         $(target + ' input').on('change', function() {
+            $(target).addClass('is-disabled');
             $(target).submit();
         });
     };
