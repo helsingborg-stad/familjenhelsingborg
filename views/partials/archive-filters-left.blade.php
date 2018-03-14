@@ -1,6 +1,6 @@
 <aside class="grid-xs-12 grid-lg-4 grid-xl-3">
     @if (!empty($enabledHeaderFilters) || !empty($enabledTaxonomyFilters))
-        <form method="get" action="{{ $archiveUrl }}" class="c-archive-filter c-archive-filter--left" id="archive-filter">
+        <form method="get" action="{{ $archiveUrl }}" class="c-archive-filter c-archive-filter--left js-submit-form" id="archive-filter">
             @if (isset($enabledTaxonomyFilters->highlighted) && !empty($enabledTaxonomyFilters->highlighted))
                 @foreach ($enabledTaxonomyFilters->highlighted as $taxKey => $taxonomy)
                     @if(count($taxonomy->values) > 1)
