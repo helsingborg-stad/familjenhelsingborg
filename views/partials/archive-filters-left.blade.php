@@ -111,6 +111,9 @@
                     </div>
                 </div>
             @endif
+            <div class="c-archive-filter__loader">
+                <div class="spinner spinner-dark"></div>
+            </div>
         </form>
     @endif
 </aside>

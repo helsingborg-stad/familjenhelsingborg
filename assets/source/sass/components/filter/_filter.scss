@@ -2,8 +2,26 @@
     margin-bottom: 45px;
 }
 
-.c-archive-filter.is-disabled {
-    opacity: 0.4;
+
+.c-archive-filter {
+    position: relative;
+
+    .c-archive-filter__loader {
+        cursor: not-allowed;
+        background: rgba(white, 0.7);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.is-disabled .c-archive-filter__loader {
+        display: flex;
+    }
 }
 
 .c-filter {
