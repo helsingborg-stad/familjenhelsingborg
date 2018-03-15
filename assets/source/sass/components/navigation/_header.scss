@@ -1,15 +1,11 @@
 .c-header {
-    overflow-x: hidden;
-
     a {
         font-size: 16px;
     }
 
     &.c-header--top {
-        overflow-x: scroll;
-
-        ::-webkit-scrollbar {
-            display: none;
+        @media screen and #{$screen-below-sm} {
+            overflow-x: scroll;
         }
 
         a {
