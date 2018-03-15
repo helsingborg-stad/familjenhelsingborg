@@ -8,6 +8,10 @@
     &.c-header--top {
         overflow-x: scroll;
 
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
         a {
             font-size: 14px;
             font-weight: bold;
