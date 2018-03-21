@@ -108,6 +108,7 @@
     @import 'utility/padding';
 
     //Color themes
+    @import 'color/link';
     @import 'color/header';
     @import 'color/footer';
     @import 'color/article';
@@ -119,6 +120,7 @@
     @import 'color/box';
     @import 'color/pagination';
     @import 'color/main';
+
 }
 
 h1, h2, h3, h4, h5, h6 {
