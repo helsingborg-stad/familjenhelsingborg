@@ -5,10 +5,8 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        article {
-            .link, a {
-                color: $primary;
-            }
+        .box table a {
+            color: $primary;
         }
     }
 }
