@@ -5,19 +5,21 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        .t-familjen-helsingborg.c-header--top {
+
+
+        .c-header.c-header--top {
             background-color: $primary;
         }
 
-        .t-familjen-helsingborg.c-header--top .c-navbar {
+        .c-header.c-header--top .c-navbar {
             background-color: darken($primary, 5%);
         }
 
-        .t-familjen-helsingborg.c-header--bottom {
+        .c-header.c-header--bottom {
             background-color: $primary;
         }
 
-        .t-familjen-helsingborg.c-header__logo svg {
+        .c-header .c-header__logo svg {
             path {
                 fill: $primary !important;
             }
