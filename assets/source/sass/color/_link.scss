@@ -5,8 +5,10 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        .link, a {
-            color: $primary;
+        article {
+            .link, a {
+                color: $primary;
+            }
         }
     }
 }
