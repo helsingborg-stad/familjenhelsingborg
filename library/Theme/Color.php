@@ -34,6 +34,8 @@ class Color
             $classes[] = "s-custom-color-orange";
         } elseif (is_post_type_archive('nyheter') ||is_singular('nyheter')) {
             $classes[] = "s-custom-color-purple";
+        } elseif (is_post_type_archive('jag-ar') ||is_singular('jag-ar')) {
+            $classes[] = "s-custom-color-orange";
         } else {
             $classes[] = "s-custom-color-blue";
         }
