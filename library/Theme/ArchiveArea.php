@@ -112,14 +112,18 @@ class ArchiveArea
                 return false;
             }
 
-            if (isset($query->posts) && is_array($query->posts) && !empty($query->posts)) {
+            $allPosts = get_posts(array(
+                'numberposts' => -1,
+                'post_type' => get_post_type()
+            ));
+
+            if (isset($allPosts) && is_array($allPosts) && !empty($allPosts)) {
                 $result = array();
 
-                foreach ($query->posts as $postItem) {
+                foreach ($allPosts as $postItem) {
                     if ($postItem->post_status != "publish") {
                         continue;
                     }
-
                     $result[] = array(
                         'location' => $postItem->post_title,
                         'excerpt' => wp_trim_words($postItem->post_content, 20),
