@@ -11,6 +11,15 @@ class Filters
         add_filter('Modularity/Widget/ColumnWidth', array($this, 'widgetColumnWidth'), 15, 2);
 
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
+
+        add_filter('body_class', array($this, 'bemDeprecated'), 10, 1);
+    }
+
+    public function bemDeprecated($classes)
+    {
+        $classes[] = 's-bem-deprecated';
+
+        return $classes;
     }
 
     /**
