@@ -112,10 +112,14 @@ class ArchiveArea
                 return false;
             }
 
-            $allPosts = get_posts(array(
-                'numberposts' => -1,
-                'post_type' => get_post_type()
-            ));
+            if(isset($_GET['filter'])) {
+                $allPosts = $query->posts;
+            } else {
+                 $allPosts = get_posts(array(
+                    'numberposts' => -1,
+                    'post_type' => $query->query['post_type']
+                ));
+            }
 
             if (isset($allPosts) && is_array($allPosts) && !empty($allPosts)) {
                 $result = array();
@@ -124,6 +128,7 @@ class ArchiveArea
                     if ($postItem->post_status != "publish") {
                         continue;
                     }
+
                     $result[] = array(
                         'location' => $postItem->post_title,
                         'excerpt' => wp_trim_words($postItem->post_content, 20),
