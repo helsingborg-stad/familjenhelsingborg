@@ -67,3 +67,7 @@
 .hamburger span.hamburger-box {
     top: 0px;
 }
+
+li.current-menu-item > a, .is-child-theme ul.sub-menu li > a {
+        text-indent: 0px;
+}
