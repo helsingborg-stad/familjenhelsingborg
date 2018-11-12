@@ -62,3 +62,8 @@
 .c-navbar .c-navbar__item.is-current:after, .c-navbar .c-navbar__item.is-current-ancestor:not(.c-navbar__sub):after {
     border-bottom-color: #f9f9f9;
 }
+
+
+.hamburger span.hamburger-box {
+    top: 0px;
+}
