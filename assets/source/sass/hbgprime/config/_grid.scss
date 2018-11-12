@@ -1,3 +1,15 @@
+//Breakpoints
+$breakpoints-map: (
+    xs : 0,         //0px
+    sm : 32.5em,    //520px
+    md : 56em,      //980px
+    lg : 78em,      //1248px
+    xl : 100em      //1600px
+) !default;
+
+//HBG MIX variables
+$mix-mq-breakpoints: $breakpoints-map;
+
 // *
 // * 1. Breakpoints
 // * 2. Media Queries
@@ -10,19 +22,18 @@
 // ***************************************************************
 
 $screen-xs-min: 0;
-$screen-xs-max: 468px;
+$screen-xs-max: map-get($breakpoints-map, sm) - 0.0625em; //468px
 
-$screen-sm-min: $screen-xs-max + 1;
-$screen-sm-max: 768px;
+$screen-sm-min: $screen-xs-max + 0.0625em; //0.0625em = 1px
+$screen-sm-max: map-get($breakpoints-map, md) - 0.0625em; //768px
 
-$screen-md-min: $screen-sm-max + 1;
-$screen-md-max: 960px;
+$screen-md-min: $screen-sm-max + 0.0625em; //0.0625em = 1px
+$screen-md-max: map-get($breakpoints-map, lg)- 0.0625em; //960px
 
-$screen-lg-min: $screen-md-max + 1;
-$screen-lg-max: 1280px;
+$screen-lg-min: $screen-md-max + 0.0625em; //0.0625em = 1px
+$screen-lg-max: map-get($breakpoints-map, xl) - 0.0625em; //1280px
 
-$screen-xl-min: $screen-lg-max + 1;
-$screen-xl-max: 1600;
+$screen-xl-min: $screen-lg-max + 0.0625em; //0.0625em = 1px
 
 // ***************************************************************
 // *** 2. Media Queries
@@ -40,7 +51,7 @@ $screen-md: "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
 $screen-md-up: "(min-width: #{$screen-md-min})";
 $screen-below-md: "(max-width: #{$screen-md-min})";
 
-$screen-lg: "(min-width: #{$screen-lg-min})";
+$screen-lg: "(min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})";
 $screen-lg-up: "(min-width: #{$screen-lg-min})";
 $screen-below-lg: "(max-width: #{$screen-lg-min})";
 
@@ -52,10 +63,10 @@ $screen-below-xl: "(max-width: #{$screen-xl-min})";
 // *** 3. Gutter
 // ***************************************************************
 
-$grid-gutter-xs: 10px;
-$grid-gutter-sm: 10px;
-$grid-gutter-md: 30px;
-$grid-gutter-lg: 30px;
+$grid-gutter-xs: 8px;
+$grid-gutter-sm: 8px;
+$grid-gutter-md: 32px;
+$grid-gutter-lg: 32px;
 
 // ***************************************************************
 // *** 4. Grid columns

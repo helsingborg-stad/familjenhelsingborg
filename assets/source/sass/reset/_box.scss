@@ -6,7 +6,9 @@
     display: block;
 }
 
-#main-content {
+#main-content,
+.c-main,
+#main {
     //Reset background, borders, box-shadow from element-level/child items
     .box, .box-panel, .box-panel-secondary {
         & > .box-content, .box-content, & > *, & > ul.nav {

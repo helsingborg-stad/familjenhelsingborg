@@ -1,6 +1,26 @@
+
+.site-header {
+    position: relative;
+}
+
 .c-header {
+    background: white;
     a {
         font-size: 16px;
+    }
+
+    &.c-header--bottom,
+    &.c-header--top {
+        .c-navbar__action,
+        a {
+            color: white;
+            opacity: 0.95;
+
+            &:hover {
+                color: white;
+                opacity: 1;
+            }
+        }
     }
 
     &.c-header--top {
@@ -14,17 +34,13 @@
             @include antialias();
 
         }
-        .c-navbar {
-            margin-top: -11.25px;
-            margin-bottom: -11.25px;
-        }
 
-        .c-navbar .c-navbar__item a {
-            padding: 10px 15px;
+        .c-navbar__action {
+            padding: 4px 12px;
         }
     }
 
-    &.c-header--bottom a {
+    &.c-header--bottom .c-navbar__action {
         font-weight: bold;
         font-size: 19px;
         @include antialias();
@@ -33,6 +49,13 @@
             background: rgba(black, 0.03);
             text-decoration: none;
         }
+    }
+}
+
+.site-header .logotype img, .site-header .logotype svg {
+    max-width: 100px;
+    @media screen and #{$screen-md-up} {
+        max-width: 200px;
     }
 }
 

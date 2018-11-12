@@ -1,4 +1,5 @@
-#main-content .s-archive-area {
+#main-content .s-archive-area,
+#main .s-area-archive {
     .box.box-index.box-card-post {
         background-color: transparent;
         border: 0;
@@ -16,6 +17,31 @@
 
         &:hover {
             h3.text-highlight {
+                color: $familjen-orange;
+            }
+        }
+    }
+
+    .c-card {
+        background: transparent;
+        border: none;
+
+        .c-card__image {
+            border-radius: 10px;
+        }
+
+        .c-card__body {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        &:hover {
+            h3.c-card__title {
                 color: $familjen-orange;
             }
         }
