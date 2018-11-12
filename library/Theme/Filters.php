@@ -16,6 +16,28 @@ class Filters
 
         //Child theme header option
         add_filter('acf/load_field/name=header_layout', array($this, 'addChildThemeHeader'));
+
+        add_filter('Municipio/Controller/BaseController/Layout', array($this, 'setPageLayout'), 10, 1);
+    }
+
+    public function setPageLayout($layout)
+    {
+        $layout['content'] = 'grid-xs-12 order-xs-1 order-md-2 grid-md-auto';
+
+        if (!is_post_type_archive('area') && !is_singular('area')) {
+            return $layout;
+        }
+
+        $layout['content'] = 'grid-xs-12 order-xs-1 order-md-2 grid-md-auto';
+
+        if (is_singular('area')) {
+            $layout['content'] = 'grid-xs-12 order-xs-1 order-xs-1 grid-sm-auto';
+            $layout['sidebarRight'] = 'grid-xs-12 grid-md-6 grid-lg-5 order-xs-3';
+        }
+
+        return $layout;
+    }
+
     public function addChildThemeHeader($field)
     {
         if (get_field('theme_mode', 'options') >= 2) {
