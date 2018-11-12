@@ -13,6 +13,15 @@ class Filters
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
 
         add_filter('body_class', array($this, 'bemDeprecated'), 10, 1);
+        //Child theme header option
+        add_filter('acf/load_field/name=header_layout', array($this, 'addChildThemeHeader'));
+    public function addChildThemeHeader($field)
+    {
+        if (get_field('theme_mode', 'options') >= 2) {
+            $field['choices']['familjen'] = 'Familjenhelsingborg (Child theme template)';
+        }
+
+        return $field;
     }
 
     public function bemDeprecated($classes)
