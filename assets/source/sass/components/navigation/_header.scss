@@ -53,7 +53,7 @@
 }
 
 .site-header .logotype img, .site-header .logotype svg {
-    max-width: 100px;
+    max-width: 128px;
     @media screen and #{$screen-md-up} {
         max-width: 200px;
     }
