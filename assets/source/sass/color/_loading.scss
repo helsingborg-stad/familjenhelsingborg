@@ -1,0 +1,26 @@
+@each $color, $value in $color-theme {
+    //Colors
+    $primary: map-get($value, primary);
+    $accent: map-get($value, accent);
+    &.s-custom-color-#{$color} {
+        .loading {
+            background-color: $primary;
+
+            div:nth-of-type(1) {
+                background-color: darken($primary, 5%);
+            }
+
+            div:nth-of-type(2) {
+                background-color: darken($primary, 10%);
+            }
+
+            div:nth-of-type(3) {
+                background-color: lighten($primary, 5%);
+            }
+
+            div:nth-of-type(4) {
+                background-color: lighten($primary, 10%);
+            }
+        }
+    }
+}
