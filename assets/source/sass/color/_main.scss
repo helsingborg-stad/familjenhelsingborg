@@ -6,7 +6,7 @@
 
     //Color scope styles
     &.s-custom-color-#{$color} {
-        .main-content {
+        .c-main {
             background-color: $background;
         }
     }

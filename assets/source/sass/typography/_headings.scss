@@ -18,9 +18,14 @@
 #{$media-elems} {
 }
 
-article {
+article, .c-article {
     #{$heading-elems} {
         font-weight: 600;
+        margin-top: 2rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     h1, .h1 {
