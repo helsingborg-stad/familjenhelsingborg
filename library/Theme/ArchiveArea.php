@@ -54,6 +54,11 @@ class ArchiveArea
      */
     public function outputQueryInfo($query)
     {
+
+        if (!is_object($query)) {
+            return;
+        }
+
         if (!$query->is_main_query() || !isset($query->query['post_type']) || $query->query['post_type'] != "area" || is_single()) {
             return;
         }
