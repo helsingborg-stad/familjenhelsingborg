@@ -102,7 +102,7 @@ class ArchiveArea
 
     public function mapPlotData($query)
     {
-        if ($query->is_main_query() && isset($query->query['post_type'])) {
+        if (is_object($query) && $query->is_main_query() && isset($query->query['post_type'])) {
 
             if ($query->query['post_type'] != "area") {
                 return false;
