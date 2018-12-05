@@ -55,6 +55,10 @@
             padding: $content-gutter*0.75 $content-gutter*2;
         }
     }
+
+    .accordion-boxes .accordion-toggle, .accordion-boxes .accordion-content, .accordion-box .accordion-toggle, .accordion-box .accordion-content, .accordion-list .accordion-toggle, .accordion-list .accordion-content {
+        padding: $content-gutter $content-gutter*2;
+    }
 }
 
 .main-footer .box {
