@@ -19,8 +19,8 @@
     ],
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://wpackagist.org"
+            "type":"composer",
+            "url":"https://wpackagist.org"
         },
         {
             "type": "vcs",
@@ -30,14 +30,12 @@
     "require": {
         "composer/installers": "^1.0",
         "philo/laravel-blade": "^3.1",
-        "symfony/debug": "^4.0",
+        "symfony/debug": "^3.0",
         "helsingborg-stad/acf-export-manager": ">=1.0.0"
     },
-    "extra": {
-        "installer-paths": {
-            "vendor/{$name}/": [
-                "type:wordpress-plugin"
-            ]
+    "extra" : {
+        "installer-paths" : {
+            "vendor/{$name}/": ["type:wordpress-plugin"]
         }
     }
 }
